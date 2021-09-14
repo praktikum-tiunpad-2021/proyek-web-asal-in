@@ -15,8 +15,7 @@
 </p>
 
 <!-- Daftar Isi -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Daftar Isi</h2></summary>
+<details open="open"><summary><h2 style="display: inline-block">Daftar Isi</h2></summary>
   <ol>
     <li><a href="#anggota-tim">Anggota Tim</a></li>
     <li><a href="#fungsi">Fungsi</a></li>
