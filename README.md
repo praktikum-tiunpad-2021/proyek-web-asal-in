@@ -27,11 +27,11 @@
 
 <!-- Anggota Tim -->
 ## Anggota Tim
-| NPM           | Name        |
-| ------------- |-------------|
-| 140810xx00xx  | John Doe    |
-| 140810xx00xx  | Jane Doe    |
-| 140810xx00xx  | Janie Doe   |
+| NPM           | Name                    |
+| ------------- |-------------------------|
+| 140810200008  | Anggie Forestry         |
+| 140810200028  | Ananda Shaquille Farell |
+| 140810200030  | Fauzan Azmi Dwicahyo    |
 
 <!-- Fungsi -->
 ## Fungsi
