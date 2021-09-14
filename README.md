@@ -1,14 +1,16 @@
 <!-- Logo Proyek -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="https://via.placeholder.com/80/FFFFFF/808080?text=Logo" alt="Logo" width="80" height="80">
+  <a href="https://github.com/praktikum-tiunpad-2021/proyek-web-asal-in">
+    <img src="img\logo.png" alt="Logo" width="256" height="256">
   </a>
 
-  <h3 align="center">Judul Proyek</h3>
+  <h3 align="center">Sistem Pendataan Perpustakaan Online</h3>
 
   <p align="center">
-    Deskripsi Proyek
+    Proyek <i>Sistem Pendataan Perpustakaan Online</i> adalah sebuh proyek
+    yang bertujuan untuk mempermudah manusia dalam mendata buku-buku dan/atau dokumen-dokumen
+    dalam suatu perpustakaan tertentu.
   </p>
 </p>
 
@@ -35,18 +37,24 @@
 
 <!-- Fungsi -->
 ## Fungsi
-
-TO;DO
+- Memenuhi kebutuhan pengguna tanpa dibatasi jarak antara perpustakaan dan pengguna perpustakaan
+- Pengelolaan informasi pada perpustakaan akan menjadi lebih mudah dan cepat
 
 <!-- Tujuan -->
 ## Tujuan
-
-TO;DO
+- Memudahkan integrasi berbagai kegiatan perpustakaan
+- Memudahkan kerjasama dan pembentukan jaringan perpustakaan
+- Membantu menghindari duplikasi kegiatan di perpustakaan
+- Menghilangkan pekerjaan yang bersifat mengulang
+- Membatu perpustakaan dalam memperluas jasa perpustakaan maupun kerjasama antar perpustakaan
+- Menimbulkan berbagai peluang untuk memasarkan jasa perpustakaan
+- Meningkatkan efisiensi pekerjaan
 
 <!-- Target Pengguna -->
 ## Target Pengguna
-
-TO;DO
+- Perpustakaan konvensional
+- Perpustakaan daring
+- Toko buku
 
 <!-- Mockup Kasar -->
 ## Mockup Kasar
@@ -57,5 +65,4 @@ Gambar mockup di sini atau [link figma](https://figma.com/).
 
 <!-- Skema Database -->
 ## Skema Database
-
-TO;DO
+![](img\database_scheme.png)
