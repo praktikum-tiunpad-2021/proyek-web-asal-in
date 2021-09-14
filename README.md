@@ -57,10 +57,7 @@
 
 <!-- Mockup Kasar -->
 ## Mockup Kasar
-
-TO;DO
-
-Gambar mockup di sini atau [link figma](https://figma.com/).
+[link figma](https://www.figma.com/file/VxSwbOTL0X7aE6ijNBirNu/Untitled?node-id=0%3A1).
 
 <!-- Skema Database -->
 ## Skema Database
