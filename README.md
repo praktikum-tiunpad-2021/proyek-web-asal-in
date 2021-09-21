@@ -62,3 +62,17 @@
 <!-- Skema Database -->
 ## Skema Database
 ![](img\database_scheme.png)
+
+<!-- Fitur -->
+## Fitur
+User bisa:
+- sign in, login
+- ngubah profil
+- liat katalog
+- reservasi buku
+
+Admin bisa:
+- semua fitur user
+- manage user lain biar dijadiin admin)
+- create, update, delete katalog
+- membatalkan reservasi buku user
