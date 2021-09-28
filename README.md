@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/praktikum-tiunpad-2021/proyek-web-asal-in">
-    <img src="img\logo.png" alt="Logo" width="256" height="256">
+    <img src="img\logosppo.png" alt="Logo" width="256" height="256">
   </a>
 
   <h3 align="center">Sistem Pendataan Perpustakaan Online</h3>
