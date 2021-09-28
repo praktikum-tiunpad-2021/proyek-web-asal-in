@@ -1,0 +1,27 @@
+.body-box form {
+    margin: 0;
+  }
+  
+  .form-item {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+  
+  .text-form {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  .form-item label {
+    width: 7rem;
+  }
+  
+  .form-item span {
+    margin-right: 1rem;
+    margin-left: 0.25rem;
+  }
+  
+  .form-item .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
