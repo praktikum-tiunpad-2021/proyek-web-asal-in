@@ -23,6 +23,7 @@
     <li><a href="#target-pengguna">Target Pengguna</a></li>
     <li><a href="#mockup-kasar">Mockup Kasar</a></li>
     <li><a href="#skema-database">Skema Database</a></li>
+    <li><a href="#fitur">Fitur</a></li>
   </ol>
 </details>
 
