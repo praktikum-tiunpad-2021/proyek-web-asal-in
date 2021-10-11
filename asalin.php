@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="asalin.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-</head>
-<title>SPPO</title>
-<body>
-    <nav>
+<?php $title = "Login | SPPO" ?>
 
-    </nav>
-    <!-- Buat sign in-->
-    <div style="background-image: url(perpustakaan.jpg);">
-      <br><center><img class="GFG" src="img\logosppo.png" height="60"></center>
-      <center><h3 style="color: white; font-family: Trebuchet MS;">Sistem Pendataan Perpustakaan Online</h3></center>
-      <br>
-    </div>
-    <div class="topnav">
-      <a class="active" href="asalin.html">Home</a>
-      <a href="#berita">Berita</a>
-      <a href="hubungi.html">Hubungi</a>
-      <a href="tentang.html">Tentang</a>
-    </div>
+<?php require('shared/navbar.php') ?>
     <br>
     <form>
         <div class="form-group">
@@ -116,4 +93,4 @@
             </div>
           </div>
     </form>    
-</body>
+<?php require('shared/footer.php') ?>
