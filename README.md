@@ -62,7 +62,7 @@
 
 <!-- Skema Database -->
 ## Skema Database
-![](img\database_scheme.png)
+![](public\img\database_scheme.png)
 
 <!-- Fitur -->
 ## Fitur

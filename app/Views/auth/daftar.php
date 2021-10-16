@@ -1,23 +1,8 @@
-<?php $title = "Login | SPPO" ?>
+<?= $this->extend('/layout/base'); ?>
 
-<?php require('shared/navbar.php') ?>
-    <br>
-    <form>
-        <div class="form-group">
-            <label>Nama Anggota :</label>
-            <input type="text" class="form-control" id="namaanggota"><br>
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput">Kata Sandi :</label>
-            <input type="text"  class="form-control" id="password"><br><br>
-        <!-- Buat lupa password -->
-        <input type="submit" name="login"><br>
-        </div>
-        <span>Belum punya akun ? <a href="#">Daftar disini</a></span>
-    </form><br><br>
-
-    <!-- Buat Formulir pendaftaran-->
-    <form>
+<?= $this->section('content'); ?>
+<!-- Buat Formulir pendaftaran-->
+<form>
         <!--No. Identitas-->
         <div class="form-group row">
           <label for="inputNoIdentitas" class="col-sm-2 col-form-label">No. Identitas</label>
@@ -92,5 +77,5 @@
               <button type="submit" class="btn btn-primary">Sign in</button>
             </div>
           </div>
-    </form>    
-<?php require('shared/footer.php') ?>
+    </form>
+<?= $this->endSection('content'); ?>
