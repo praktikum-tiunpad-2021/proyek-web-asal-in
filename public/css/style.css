@@ -1,75 +1,84 @@
 /*
 .body-box form {
-    margin: 0;
-  }
-  
-  .form-item {
-    display: flex;
-    padding-bottom: 1rem;
-  }
-  
-  .text-form {
-    font-family: inherit;
-    font-size: inherit;
-  }
-  
-  .form-item label {
-    width: 7rem;
-  }
-  
-  .form-item span {
-    margin-right: 1rem;
-    margin-left: 0.25rem;
-  }
-  
-  .form-item .options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  */
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  main {
-    width: clamp(0px, 95%, 1024px);
-    margin: 1rem auto 1rem;
-    
-  }
-  
-  /* Untuk navigation bar*/
-  .topnav {
-    overflow: hidden;
-    background-color: #03045e;
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
-    background-color: #caf0f8;
-    color: black;
-  }
-  
-  .topnav a.active {
-    background-color: #023e8a;
-    color: white;
-  }
-
-  /* Untuk efek glowing */
-.GFG{
-  width:60px ;
-  height:60px;
-  border-radius: 10%;
+  margin: 0;
 }
-.GFG:hover{
+
+.form-item {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.text-form {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form-item label {
+  width: 7rem;
+}
+
+.form-item span {
+  margin-right: 1rem;
+  margin-left: 0.25rem;
+}
+
+.form-item .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: clamp(0px, 95%, 1024px);
+  margin: 1rem auto;
+  
+}
+
+header {
+  background: url("../img/perpustakaan.jpg");
+}
+
+/* Untuk navigation bar*/
+nav {
+  overflow: hidden;
+  background-color: #03045e;
+}
+
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover {
+  background-color: #caf0f8;
+  color: black;
+}
+
+nav a.active {
+  background-color: #023e8a;
+  color: white;
+}
+
+.logo-row {
+  width: 75px;
+  margin: 0 auto;
+}
+
+/* Untuk efek glowing */
+.logo {
+  width: 100%;
+  border-radius: 25%;
+}
+
+.logo:hover{
   color: #111; 
   background: #0077b6;
   box-shadow: 0 0 100px white; 
