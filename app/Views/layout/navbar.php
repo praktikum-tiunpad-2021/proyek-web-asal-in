@@ -1,7 +1,7 @@
 <header>
   <div class="logo-row">
     <br><br>
-    <img class="logo" src="img/logosppo.png">
+    <img class="logo" src="img/logo.png">
     <br><br>
   </div>
   
