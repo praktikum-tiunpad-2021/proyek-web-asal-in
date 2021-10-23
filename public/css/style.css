@@ -27,59 +27,99 @@
   grid-template-columns: repeat(2, 1fr);
 }
 */
-body {
+:root {
+  --palette-very-dark:#111;
+  --palette-dark:#03045e;
+  --palette-bright:#023e8a;
+  --palette-very-bright:#0077b6;
+  --palette-almost-white: #caf0f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  font-family: 'Open sans', sans-serif;
 }
 
-main {
-  width: clamp(0px, 95%, 1024px);
-  margin: 1rem auto;
-  
-}
-
+/* Untuk navigation bar */
 header {
-  background: url("../img/perpustakaan.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4em;
+  padding: 0 5vw;
+  background-color: var(--palette-dark);
 }
 
-/* Untuk navigation bar*/
+header .logo, .logo-container {
+  height: inherit;
+  display: inline-block;
+}
+
+header .logo {
+  padding: 0.25em;
+}
+
+nav, .nav-item {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
 nav {
-  overflow: hidden;
-  background-color: #03045e;
+  padding: 0;
+  margin: 0;
 }
 
-nav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+nav .nav-item {
+  padding: 0 1em;
+  font-weight: 600;
+  font-size: medium;
+  color: white;
   text-decoration: none;
-  font-size: 17px;
 }
 
-nav a:hover {
+nav .nav-item:hover {
   background-color: #caf0f8;
   color: black;
 }
 
-nav a.active {
-  background-color: #023e8a;
+#login-button-container {
+  margin-left: 1em;
+}
+
+#login-button {
+  font-weight: 600;
+  font-size: medium;
+  padding: 0.5em 1em;
+  background-color: var(--palette-very-bright);
+  border-bottom: none;
+  border: none;
   color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.logo-row {
-  width: 75px;
-  margin: 0 auto;
+#login-button:hover {
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Untuk efek glowing */
-.logo {
-  width: 100%;
-  border-radius: 25%;
+.container {
+  width: clamp(0px, 95%, 1024px);
+  margin: 1rem auto;
 }
 
-.logo:hover{
-  color: #111; 
-  background: #0077b6;
-  box-shadow: 0 0 100px white; 
+.login-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--palette-dark);
+  border-radius: 10px;
+  display: flex;
+  padding: 2em;
 }

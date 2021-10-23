@@ -1,13 +1,15 @@
 <header>
-  <div class="logo-row">
-    <br><br>
-    <img class="logo" src="img/logo.png">
-    <br><br>
-  </div>
-  
+  <a href="/" class="logo-container">
+    <img src="img/logo-transparent.svg" class="logo" alt="SPPO">
+  </a>
+
   <nav>
-    <a href="/">Home</a>
-    <a href="#berita">Berita</a>
-    <a href="/hubungi">Hubungi</a>
-  </nav>
+    <a class="nav-item" href="/">Home</a>
+    <a class="nav-item" href="#berita">Berita</a>
+    <a class="nav-item" href="/hubungi">Hubungi</a>
+
+    <a href="/masuk" id="login-button-container">
+      <button id="login-button">Masuk</button>
+    </a>
+</nav>
 </header>

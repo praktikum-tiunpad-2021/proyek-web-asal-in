@@ -1,6 +1,7 @@
 <?= $this->extend('/layout/base'); ?>
 
 <?= $this->section('content'); ?>
+<main class="login-container">
     <form>
         <div class="form-group">
             <label>Nama Anggota :</label>
@@ -14,4 +15,5 @@
         </div>
         <span>Belum punya akun ? <a href="/daftar">Daftar disini</a></span>
     </form>
+</main>
 <?= $this->endSection('content'); ?>
