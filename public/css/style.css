@@ -1,38 +1,29 @@
-/*
-.body-box form {
-  margin: 0;
-}
-
-.form-item {
-  display: flex;
-  padding-bottom: 1rem;
-}
-
-.text-form {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-.form-item label {
-  width: 7rem;
-}
-
-.form-item span {
-  margin-right: 1rem;
-  margin-left: 0.25rem;
-}
-
-.form-item .options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-*/
 :root {
   --palette-very-dark:#111;
   --palette-dark:#03045e;
   --palette-bright:#023e8a;
   --palette-very-bright:#0077b6;
   --palette-almost-white: #caf0f8;
+}
+
+.yellow {
+  color: black;
+  background-color: yellow;
+}
+
+.dark {
+  color: white;
+  background-color: var(--palette-dark);
+}
+
+.bright {
+  color: white;
+  background-color: var(--palette-bright);
+}
+
+.very-bright {
+  color: white;
+  background-color: var(--palette-very-bright);
 }
 
 * {
@@ -43,6 +34,32 @@ html, body {
   margin: 0;
   height: 100%;
   font-family: 'Open sans', sans-serif;
+}
+
+.btn {
+  border-bottom: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+
+input[type=text] {
+  height: 2em;
+  padding: 0em 0.5em;
+  border: 1px solid rgb(196, 196, 196);
+  transition: 0.5s;
+}
+
+/* TODO nyari tau kenapa ini nggak jalan */
+input[type=text]:focus {
+  border: 1px solid var(--palette-very-bright);
+}
+
+a {
+  text-decoration: none;
+  color: var(--palette-very-bright);
+  font-weight: bold;
 }
 
 /* Untuk navigation bar */
@@ -97,29 +114,48 @@ nav .nav-item:hover {
   font-size: medium;
   padding: 0.5em 1em;
   background-color: var(--palette-very-bright);
-  border-bottom: none;
-  border: none;
   color: white;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 #login-button:hover {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.container {
-  width: clamp(0px, 95%, 1024px);
-  margin: 1rem auto;
-}
-
+/* buat login page */
 .login-container {
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid var(--palette-dark);
-  border-radius: 10px;
-  display: flex;
+  width: 25em;
+  border: 2px solid var(--palette-bright);
+}
+
+.login-container h1 {
+  margin: 0;
+  padding: 0.2em 0;
+  text-align: center;
+}
+
+.login-container form {
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container form .form-item {
+  line-height: 2em;
+  padding-bottom: 1em;
+  display: inherit;
+  flex-direction: inherit;
+}
+
+/* .form-item .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+} */
+
+.container {
+  width: clamp(0px, 95%, 1024px);
+  margin: 1rem auto;
 }

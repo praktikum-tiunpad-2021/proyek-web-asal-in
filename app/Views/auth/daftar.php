@@ -1,6 +1,7 @@
 <?= $this->extend('/layout/base'); ?>
 
 <?= $this->section('content'); ?>
+<main class="container">
 <!-- Buat Formulir pendaftaran-->
 <form>
         <!--No. Identitas-->
@@ -78,4 +79,5 @@
             </div>
           </div>
     </form>
+</main>
 <?= $this->endSection('content'); ?>

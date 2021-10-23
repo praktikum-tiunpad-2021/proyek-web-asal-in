@@ -9,7 +9,7 @@
     <a class="nav-item" href="/hubungi">Hubungi</a>
 
     <a href="/masuk" id="login-button-container">
-      <button id="login-button">Masuk</button>
+      <button class="btn" id="login-button">Masuk</button>
     </a>
 </nav>
 </header>
