@@ -8,6 +8,7 @@ class AuthController extends BaseController
   {
     $data = [
       'pageTitle' => 'Masuk | SPPO',
+      'disableNavbar' => true,
     ];
     return view('auth/masuk', $data);
   }
@@ -21,6 +22,7 @@ class AuthController extends BaseController
   {
     $data = [
       'pageTitle' => 'Daftar | SPPO',
+      'disableNavbar' => true,
     ];
     return view('auth/daftar', $data);
   }

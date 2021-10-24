@@ -3,10 +3,11 @@ $palette-dark:#03045e;
 $palette-bright:#023e8a;
 $palette-very-bright:#0077b6;
 $palette-almost-white: #caf0f8;
+$palette-gold: #b3995d;
 
-.yellow {
-  color: black;
-  background-color: yellow;
+.gold {
+  color: white;
+  background-color: $palette-gold;
 }
 
 .dark {
@@ -58,7 +59,6 @@ html, body {
   font-family: 'Open sans', sans-serif;
 }
 
-
 // komponen-komponen
 .btn {
   border-bottom: none;
@@ -68,6 +68,11 @@ html, body {
   padding: 0.5em 1.25em;
   font-size: medium;
   font-weight: bold;
+  transition: 0.15s;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 }
 
 input[type=text], 
@@ -114,6 +119,11 @@ hr {
   border-top: 0.1px solid #aaa;
 }
 
+strong {
+  color: red;
+  font-weight: normal;
+}
+
 // bagian-bagian laman
 header {
   display: flex;
@@ -156,19 +166,13 @@ header {
     }
   }
 
-  #login-button-container {
+  .button-container {
     margin-left: 1em;
 
-    #login-button {
+    button {
       font-weight: 600;
       font-size: medium;
       padding: 0.5em 1em;
-      background-color: $palette-very-bright;
-      color: white;
-      
-      &:hover {
-        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-      }
     }
   }
 }

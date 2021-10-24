@@ -1,6 +1,6 @@
-.yellow {
-  color: black;
-  background-color: yellow;
+.gold {
+  color: white;
+  background-color: #b3995d;
 }
 
 .dark {
@@ -61,6 +61,13 @@ html, body {
   padding: 0.5em 1.25em;
   font-size: medium;
   font-weight: bold;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.btn:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
 }
 
 input[type=text],
@@ -116,6 +123,11 @@ hr {
   border-top: 0.1px solid #aaa;
 }
 
+strong {
+  color: red;
+  font-weight: normal;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,21 +180,14 @@ header nav .nav-item:hover {
   color: black;
 }
 
-header #login-button-container {
+header .button-container {
   margin-left: 1em;
 }
 
-header #login-button-container #login-button {
+header .button-container button {
   font-weight: 600;
   font-size: medium;
   padding: 0.5em 1em;
-  background-color: #0077b6;
-  color: white;
-}
-
-header #login-button-container #login-button:hover {
-  -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .login-container {
