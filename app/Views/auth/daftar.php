@@ -8,7 +8,7 @@
 
     <form class="border" action="/signup" method="POST">
         <div class="form-item">
-            <span><label for="name">Nama</label></span>
+            <span><label for="name">Nama</label><strong>*</strong></span>
             <input type="text" id="name" name="name">
         </div>
 
@@ -58,17 +58,17 @@
         <hr>
 
         <div class="form-item">
-            <span><label for="email">Email</label></span>
+            <span><label for="email">Email</label><strong>*</strong></span>
             <input type="email" id="email" name="email">
         </div>
 
         <div class="form-item">
-            <span><label for="password">Password</label></span>
+            <span><label for="password">Password</label><strong>*</strong></span>
             <input type="password" id="password" name="password">
         </div>
 
         <div class="form-item">
-            <span><label for="password_repeat">Ulangi Password</label></span>
+            <span><label for="password_repeat">Ulangi Password</label><strong>*</strong></span>
             <input type="password" id="password_repeat" name="password_repeat">
         </div>
         
