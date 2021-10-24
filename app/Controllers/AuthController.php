@@ -12,6 +12,11 @@ class AuthController extends BaseController
     return view('auth/masuk', $data);
   }
 
+  public function login()
+  {
+    dd($this->request->getPost());
+  }
+
   public function daftar()
   {
     $data = [

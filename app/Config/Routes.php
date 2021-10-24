@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/hubungi', 'Home::hubungi');
 $routes->get('/masuk', 'AuthController::masuk');
+$routes->post('/login', 'AuthController::login');
 $routes->get('/daftar', 'AuthController::daftar');
 
 /*
