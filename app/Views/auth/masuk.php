@@ -11,7 +11,7 @@
         
         <div class="form-item">
             <label for="password">Kata Sandi</label>
-            <input type="text" id="password" name="password">
+            <input type="password" id="password" name="password">
         </div>
 
         <div class="form-item" style="margin-top: 1em;">
