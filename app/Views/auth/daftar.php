@@ -12,8 +12,6 @@
             <input type="text" id="name" name="name">
         </div>
 
-        
-        <!--Jenis Kelamin-->
         <div class="form-item">
             <span><label for="gender">Jenis Kelamin</label></span>
             <span>
@@ -31,7 +29,6 @@
             <input type="date" id="date_of_birth" name="date_of_birth">
         </div>
 
-        <!--Alamat-->
         <div class="form-item">
             <span><label for="address">Alamat</label></span>
             <textarea id="address"></textarea>
