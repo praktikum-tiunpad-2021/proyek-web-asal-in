@@ -36,6 +36,7 @@ $routes->get('/hubungi', 'Home::hubungi');
 $routes->get('/masuk', 'AuthController::masuk');
 $routes->post('/login', 'AuthController::login');
 $routes->get('/daftar', 'AuthController::daftar');
+$routes->post('/signup', 'AuthController::signup');
 
 /*
  * --------------------------------------------------------------------

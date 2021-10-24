@@ -24,4 +24,9 @@ class AuthController extends BaseController
     ];
     return view('auth/daftar', $data);
   }
+
+  public function signup()
+  {
+    dd($this->request->getPost());
+  }
 }

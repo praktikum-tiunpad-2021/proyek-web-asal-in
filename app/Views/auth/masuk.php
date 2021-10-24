@@ -1,8 +1,10 @@
 <?= $this->extend('/layout/base'); ?>
 
 <?= $this->section('content'); ?>
-<main class="login-container">
-    <h1 class="bright">MASUK</h1>
+<main class="login-container round-border">
+    <div class="header-box bright">
+        <h1>MASUK</h1>
+    </div>
     <form class="border" action="/login" method="POST">
         <div class="form-item">
             <label for="user_id">Nomor Anggota</label>
@@ -14,7 +16,7 @@
             <input type="password" id="password" name="password">
         </div>
 
-        <div class="form-item" style="margin-top: 1em;">
+        <div class="form-item">
             <input type="submit" class="btn very-bright" style="padding:0.75em;" name="login" value="Masuk">
         </div>
         <div style="text-align: center;">Belum punya akun? <a href="/daftar">Daftar disini</a></div>
