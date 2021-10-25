@@ -57,12 +57,11 @@
 - Toko buku
 
 <!-- Mockup Kasar -->
-## Mockup Kasar
-[link figma](https://www.figma.com/file/VxSwbOTL0X7aE6ijNBirNu/Untitled?node-id=0%3A1).
+## [Mockup Kasar](https://www.figma.com/file/VxSwbOTL0X7aE6ijNBirNu/Untitled?node-id=0%3A1)
 
 <!-- Skema Database -->
 ## Skema Database
-![](public\img\database_scheme.png)
+![](public\img\database_scheme.drawio.svg)
 
 <!-- Fitur -->
 ## Fitur
