@@ -61,7 +61,7 @@
 
 <!-- Skema Database -->
 ## Skema Database
-![](public\img\database_scheme.drawio.svg)
+![](public/img/database_scheme.drawio.svg)
 
 <!-- Fitur -->
 ## Fitur
