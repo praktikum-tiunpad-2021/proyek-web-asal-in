@@ -15,7 +15,12 @@ class AuthController extends BaseController
 
   public function login()
   {
-    dd($this->request->getPost());
+    d($this->request->getPost());
+    session()->set('isLoggedIn', true);
+    session()->set('userData', [
+      'role' => 'user',
+    ]);
+    return redirect()->to(base_url());
   }
 
   public function daftar()
@@ -30,5 +35,13 @@ class AuthController extends BaseController
   public function signup()
   {
     dd($this->request->getPost());
+  }
+
+  public function logout()
+  {
+    // d($this->request->getPost());
+    session()->remove('isLoggedIn');
+    session()->remove('userData');
+    return redirect()->to(base_url());
   }
 }
