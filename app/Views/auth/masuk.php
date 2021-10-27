@@ -19,7 +19,7 @@
         <div class="form-item">
             <input type="submit" class="btn very-bright" style="padding:0.75em;" name="login" value="Masuk">
         </div>
-        <div style="text-align: center;">Belum punya akun? <a href="/daftar">Daftar disini</a></div>
+        <div style="text-align: center;">Belum punya akun? <a href="<?= base_url('daftar') ?>">Daftar disini</a></div>
     </form>
 </main>
 <?= $this->endSection('content'); ?>
