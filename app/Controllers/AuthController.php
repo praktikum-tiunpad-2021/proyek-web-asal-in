@@ -1,9 +1,17 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\UserModel;
 
 class AuthController extends BaseController
 {
+  protected $userModel;
+
+  public function __construct()
+  {
+    $this->userModel = new UserModel();
+  }
+
   public function masuk()
   {
     $data = [
@@ -15,10 +23,23 @@ class AuthController extends BaseController
 
   public function login()
   {
-    d($this->request->getPost());
+    $this->userModel->setDynamicRules('login');
+    $rules = $this->userModel->getValidationRules();
+    $messages = $this->userModel->getValidationMessages();
+
+    if (!$this->validate($rules, $messages)) {
+      return redirect()->to(base_url('masuk'))->withInput();
+    }
+
+    $user = $this->userModel->find($this->request->getPost('user_id'));
+    if (!$user || $user['password'] != $this->request->getPost('password')){
+      return redirect()->to(base_url('masuk'));
+    }
+
     session()->set('isLoggedIn', true);
     session()->set('userData', [
-      'role' => 'user',
+      'user_id' => $user['user_id'],
+      'role' => $user['role'],
     ]);
     return redirect()->to(base_url());
   }
@@ -35,11 +56,17 @@ class AuthController extends BaseController
   public function signup()
   {
     dd($this->request->getPost());
+    // $this->userModel->setDynamicRules('signup');
+    // $rules = $this->userModel->getValidationRules();
+    // $messages = $this->userModel->getValidationMessages();
+
+    // if (!$this->validate($rules, $messages)) {
+    //   return redirect()->to(base_url('masuk'))->withInput();
+    // }
   }
 
   public function logout()
   {
-    // d($this->request->getPost());
     session()->remove('isLoggedIn');
     session()->remove('userData');
     return redirect()->to(base_url());
