@@ -7,9 +7,9 @@
     <?php if (!empty($disableNavbar) && $disableNavbar == true) : ?>
     <?php elseif (!session()->isLoggedIn) : ?>
       <?= $this->include('/layout/navbar/guest'); ?>
-    <?php elseif (session()->userData['role'] == 'user') : ?>
+    <?php elseif (session()->userData['role'] == 'USER') : ?>
       <?= $this->include('/layout/navbar/user'); ?>
-    <?php elseif (session()->userData['role'] == 'admin') : ?>
+    <?php elseif (session()->userData['role'] == 'ADMIN') : ?>
       <?= $this->include('/layout/navbar/admin'); ?>
     <?php endif; ?>
 </nav>
