@@ -68,8 +68,8 @@
         </div>
 
         <div class="form-item">
-            <span><label for="password_repeat">Ulangi Password</label><strong>*</strong></span>
-            <input type="password" id="password_repeat" name="password_repeat">
+            <span><label for="confirm_password">Ulangi Password</label><strong>*</strong></span>
+            <input type="password" id="confirm_password" name="confirm_password">
         </div>
         
         <div class="form-item" style="justify-content:space-evenly">
