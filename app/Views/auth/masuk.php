@@ -8,7 +8,7 @@
     <form class="border" action="/login" method="POST">
         <div class="form-item">
             <label for="user_id">Nomor Anggota</label>
-            <input type="text" id="user_id" name="user_id" autofocus>
+            <input type="text" id="user_id" name="user_id" autofocus value="<?= old('user_id') ? old('user_id') : '' ?>">
         </div>
         
         <div class="form-item">
