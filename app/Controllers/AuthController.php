@@ -2,14 +2,17 @@
 
 namespace App\Controllers;
 use App\Models\UserModel;
+use App\Models\UserProfileModel;
 
 class AuthController extends BaseController
 {
   protected $userModel;
+  protected $userProfileModel;
 
   public function __construct()
   {
     $this->userModel = new UserModel();
+    $this->userProfileModel = new UserProfileModel();
   }
 
   public function masuk()
@@ -55,14 +58,25 @@ class AuthController extends BaseController
 
   public function signup()
   {
-    dd($this->request->getPost());
-    // $this->userModel->setDynamicRules('signup');
-    // $rules = $this->userModel->getValidationRules();
-    // $messages = $this->userModel->getValidationMessages();
+    $this->userModel->setDynamicRules('signup');
+    $this->userProfileModel->setDynamicRules('signup');
 
-    // if (!$this->validate($rules, $messages)) {
-    //   return redirect()->to(base_url('masuk'))->withInput();
-    // }
+    $rules = array_merge($this->userModel->getValidationRules(), $this->userProfileModel->getValidationRules());
+    $messages = array_merge($this->userModel->getValidationMessages(), $this->userProfileModel->getValidationMessages());
+
+    if (!$this->validate($rules, $messages)) {
+      return redirect()->to(base_url('daftar'))->withInput();
+    }
+
+    $id = $this->userModel->createUser($this->request->getPost());
+    $this->userProfileModel->createUserProfile($id, $this->request->getPost());
+
+    session()->set('isLoggedIn', true);
+    session()->set('userData', [
+      'user_id' => $id,
+      'role' => 'USER',
+    ]);
+    return redirect()->to(base_url());
   }
 
   public function logout()

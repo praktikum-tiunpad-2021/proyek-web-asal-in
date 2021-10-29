@@ -46,4 +46,19 @@ class UserModel extends Model
   {
     $this->setValidationRules($this->dynamicRules[$rules]);
   }
+
+  public function createUser($data)
+  {
+    $data = array_merge(
+      $data,
+      [
+        'role' => 'USER',
+        'borrowed_book_count' => 0,
+        'in_progress_count' => 0,
+      ]
+    );
+
+    $this->setValidationRules([]);
+    return $this->insert($data);
+  }
 }
