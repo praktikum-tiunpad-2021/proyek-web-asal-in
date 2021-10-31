@@ -7,7 +7,7 @@ class Home extends BaseController
   public function index()
   {
     $data = [
-      'pageTitle' => 'SPPO',
+      'pageTitle' => SITE_TITLE,
     ];
     return view('home', $data);
   }
@@ -15,7 +15,7 @@ class Home extends BaseController
   public function hubungi()
   {
     $data = [
-      'pageTitle' => 'Hubungi | SPPO',
+      'pageTitle' => 'Hubungi | ' . SITE_TITLE,
     ];
     return view('hubungi', $data);
   }

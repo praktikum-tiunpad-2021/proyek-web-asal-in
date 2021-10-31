@@ -18,7 +18,7 @@ class AuthController extends BaseController
   public function masuk()
   {
     $data = [
-      'pageTitle' => 'Masuk | SPPO',
+      'pageTitle' => 'Masuk | ' . SITE_TITLE,
       'disableNavbar' => true,
     ];
     return view('auth/masuk', $data);
@@ -50,7 +50,7 @@ class AuthController extends BaseController
   public function daftar()
   {
     $data = [
-      'pageTitle' => 'Daftar | SPPO',
+      'pageTitle' => 'Daftar | ' . SITE_TITLE,
       'disableNavbar' => true,
     ];
     return view('auth/daftar', $data);
