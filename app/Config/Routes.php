@@ -33,12 +33,20 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/hubungi', 'Home::hubungi');
-$routes->get('/masuk', 'AuthController::masuk');
-$routes->post('/login', 'AuthController::login');
-$routes->get('/logout', 'AuthController::logout');
-$routes->get('/daftar', 'AuthController::daftar');
-$routes->post('/signup', 'AuthController::signup');
 
+$routes->group('', ['filter' => 'auth'], function ($routes) {
+    $routes->get('/masuk', 'AuthController::masuk');
+    $routes->post('/login', 'AuthController::login');
+    $routes->get('/daftar', 'AuthController::daftar');
+    $routes->post('/signup', 'AuthController::signup');
+});
+
+$routes->group('', ['filter' => 'user'], function ($routes) {
+    $routes->get('/logout', 'AuthController::logout');
+});
+
+$routes->group('', ['filter' => 'admin'], function ($routes) {
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing
