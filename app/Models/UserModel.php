@@ -8,6 +8,7 @@ class UserModel extends Model
 {
   protected $table = 'user';
   protected $primaryKey = 'user_id';
+  protected $useAutoIncrement = true;
 
   protected $allowedFields = ['email', 'password', 'role', 'borrowed_book_count', 'in_progress_count'];
 
