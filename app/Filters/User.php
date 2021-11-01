@@ -11,7 +11,7 @@ class User implements FilterInterface
   public function before(RequestInterface $request, $arguments = null)
   {
     if (!session()->isLoggedIn){
-      return redirect()->to(base_url('login'));
+      return redirect()->to(base_url('masuk'));
     }
   }
 
