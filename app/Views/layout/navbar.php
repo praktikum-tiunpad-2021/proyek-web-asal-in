@@ -1,6 +1,6 @@
 <header>
   <a href="/" class="logo-container">
-    <img src="img/logo-transparent.svg" class="logo" alt="SPPO">
+    <img src="/img/logo-transparent.svg" class="logo" alt="SPPO">
   </a>
 
   <nav>
