@@ -11,7 +11,7 @@ class Admin implements FilterInterface
   public function before(RequestInterface $request, $arguments = null)
   {
     if (!session()->isLoggedIn){
-      return redirect()->to(base_url('msauk'));
+      return redirect()->to(base_url('masuk'));
     }
 
     if (session()->userData['role'] != 'ADMIN'){
