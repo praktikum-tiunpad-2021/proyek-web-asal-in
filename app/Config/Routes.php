@@ -41,12 +41,32 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('/signup', 'AuthController::signup');
 });
 
-$routes->group('', ['filter' => 'user'], function ($routes) {
-    $routes->get('/logout', 'AuthController::logout');
+$routes->group('buku', function ($routes) {
+    $routes->get('/katalog', 'BookController::katalog'); // Belom
+    $routes->get('detail/(:num)', 'BookController::detail/$1'); // Belom
 });
 
-$routes->group('', ['filter' => 'admin'], function ($routes) {
+$routes->group('', ['filter' => 'user'], function ($routes) {
+    $routes->get('/logout', 'AuthController::logout');
+
+    $routes->group('profil', function ($routes) {
+        $routes->get('/', 'ProfileController::index'); // Belom
+        $routes->get('/ubah', 'ProfileController::ubahProfil'); // Belom
+        $routes->get('/ubah-password', 'ProfileController::ubahPassword'); // Belom
+
+        $routes->put('/save-profile', 'ProfileController::saveProfile'); // Belom
+        $routes->put('/save-password', 'ProfileController::savePassword'); // Belom
+    });
+
+    $routes->group('buku', function ($routes) {
+        $routes->post('/pinjam', 'BookController::pinjam'); // Belom
+        $routes->get('/daftar-peminjaman', 'BookController::daftarPeminjaman'); // Belom
+    });
 });
+
+$routes->group('admin', ['filter' => 'admin'], function ($routes) {
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
