@@ -32,7 +32,7 @@
 
         <div class="form-item">
             <span><label for="address">Alamat</label></span>
-            <textarea id="address"><?= old('address') ? old('address') : '' ?>"</textarea>
+            <textarea id="address"><?= old('address') ? old('address') : '' ?></textarea>
         </div>
         
         <div class="form-item">
