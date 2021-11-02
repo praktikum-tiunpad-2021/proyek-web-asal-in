@@ -31,47 +31,47 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/hubungi', 'Home::hubungi');
+$routes->get('', 'Home::index');
+$routes->get('hubungi', 'Home::hubungi');
 
 $routes->group('', ['filter' => 'auth'], function ($routes) {
-    $routes->get('/masuk', 'AuthController::masuk');
-    $routes->post('/login', 'AuthController::login');
-    $routes->get('/daftar', 'AuthController::daftar');
-    $routes->post('/signup', 'AuthController::signup');
+    $routes->get('masuk', 'AuthController::masuk');
+    $routes->post('login', 'AuthController::login');
+    $routes->get('daftar', 'AuthController::daftar');
+    $routes->post('signup', 'AuthController::signup');
 });
 
 $routes->group('buku', function ($routes) {
-    $routes->get('/katalog', 'BookController::katalog'); // Belom
+    $routes->get('katalog', 'BookController::katalog'); // Belom
     $routes->get('detail/(:num)', 'BookController::detail/$1'); // Belom
 });
 
 $routes->group('', ['filter' => 'user'], function ($routes) {
-    $routes->get('/logout', 'AuthController::logout');
+    $routes->get('logout', 'AuthController::logout');
 
     $routes->group('profil', function ($routes) {
-        $routes->get('/', 'ProfileController::index'); // Belom
-        $routes->get('/ubah', 'ProfileController::ubahProfil'); // Belom
-        $routes->get('/ubah-password', 'ProfileController::ubahPassword'); // Belom
+        $routes->get('', 'ProfileController::index'); // Belom
+        $routes->get('ubah', 'ProfileController::ubahProfil'); // Belom
+        $routes->get('ubah-password', 'ProfileController::ubahPassword'); // Belom
 
-        $routes->put('/save-profile', 'ProfileController::saveProfile'); // Belom
-        $routes->put('/save-password', 'ProfileController::savePassword'); // Belom
+        $routes->put('save-profile', 'ProfileController::saveProfile'); // Belom
+        $routes->put('save-password', 'ProfileController::savePassword'); // Belom
     });
 
     $routes->group('buku', function ($routes) {
-        $routes->post('/pinjam', 'BookController::pinjam'); // Belom
-        $routes->get('/daftar-peminjaman', 'BookController::daftarPeminjaman'); // Belom
+        $routes->post('pinjam', 'BookController::pinjam'); // Belom
+        $routes->get('daftar-peminjaman', 'BookController::daftarPeminjaman'); // Belom
     });
 });
 
 $routes->group('admin', ['namespace' => 'admin', 'filter' => 'admin'], function ($routes) {
-    $routes->get('/', 'AuthController::index'); // Belom
+    $routes->get('', 'AuthController::index'); // Belom
 
     $routes->group('buku', function ($routes) {
-        $routes->get('/tambah', 'BookController::tambahBuku'); // Belom
-        $routes->get('/ubah', 'BookController::ubahBuku'); // Belom
-        $routes->post('/add-book', 'BookController::addBook'); // Belom
-        $routes->put('/change-book', 'BookController::changeBook'); // Belom
+        $routes->get('tambah', 'BookController::tambahBuku'); // Belom
+        $routes->get('ubah', 'BookController::ubahBuku'); // Belom
+        $routes->post('add-book', 'BookController::addBook'); // Belom
+        $routes->put('change-book', 'BookController::changeBook'); // Belom
     });
 });
 
