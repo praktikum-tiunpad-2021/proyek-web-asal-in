@@ -35,7 +35,7 @@ class AuthController extends BaseController
     }
 
     $user = $this->userModel->find($this->request->getPost('user_id'));
-    if (!$user || $user['password'] != $this->request->getPost('password')){
+    if (!$user || !password_verify($this->request->getPost('password'), $user['password'])){
       return redirect()->to(base_url('masuk'));
     }
 
