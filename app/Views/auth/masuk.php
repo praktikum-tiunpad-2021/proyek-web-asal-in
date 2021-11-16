@@ -16,6 +16,10 @@
             <input type="password" id="password" name="password">
         </div>
 
+        <div>
+            <input type="checkbox" id="stay_logged_in" name="stay_logged_in"><label for="stay_logged_in" style="margin-left: 5px">Tetap Masuk</label>
+        </div>
+
         <div class="form-item">
             <input type="submit" class="btn very-bright" style="padding:0.75em;" name="login" value="Masuk">
         </div>

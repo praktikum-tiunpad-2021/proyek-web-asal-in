@@ -22,6 +22,7 @@ class Filters extends BaseConfig
         'auth'     => \App\Filters\Auth::class,
 		'admin'    => \App\Filters\Admin::class,
 		'user'     => \App\Filters\User::class,
+		'autoAuth' => \App\Filters\AutoAuth::class,
     ];
 
     /**
@@ -32,6 +33,7 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
+            'autoAuth',
             // 'honeypot',
             // 'csrf',
         ],

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+use CodeIgniter\Cookie\Cookie;
+use CodeIgniter\Cookie\CookieStore;
 use App\Models\UserModel;
 use App\Models\UserProfileModel;
 
@@ -37,6 +39,27 @@ class AuthController extends BaseController
     $user = $this->userModel->find($this->request->getPost('user_id'));
     if (!$user || !password_verify($this->request->getPost('password'), $user['password'])){
       return redirect()->to(base_url('masuk'));
+    }
+
+    if ($this->request->getPost('stay_logged_in') == 'on'){
+      $store = new CookieStore([
+        new Cookie(
+          'auth_user',
+          $user['user_id'],
+          [ 
+            'expire' => (10 * 365 * 24 * 60 * 60),
+          ]
+        ),
+  
+        new Cookie(
+          'auth_password',
+          $user['password'],
+          [ 
+            'expire' => (10 * 365 * 24 * 60 * 60),
+          ]
+        ),
+      ]);
+      $store->dispatch();
     }
 
     session()->set('isLoggedIn', true);
@@ -81,6 +104,25 @@ class AuthController extends BaseController
 
   public function logout()
   {
+    $store = new CookieStore([
+      new Cookie(
+        'auth_user',
+        '',
+        [ 
+          'expire' => 1,
+        ]
+      ),
+
+      new Cookie(
+        'auth_password',
+        '',
+        [ 
+          'expire' => 1,
+        ]
+      ),
+    ]);
+    $store->dispatch();
+
     session()->remove('isLoggedIn');
     session()->remove('userData');
     return redirect()->to(base_url());
