@@ -64,14 +64,13 @@ $routes->group('', ['filter' => 'user'], function ($routes) {
     });
 });
 
-$routes->group('admin', ['namespace' => 'admin', 'filter' => 'admin'], function ($routes) {
-    $routes->get('', 'AuthController::index'); // Belom
-
+$routes->group('admin', ['namespace' => 'App/Controllers/Admin', 'filter' => 'admin'], function ($routes) {
     $routes->group('buku', function ($routes) {
-        $routes->get('tambah', 'BookController::tambahBuku'); // Belom
-        $routes->get('ubah', 'BookController::ubahBuku'); // Belom
-        $routes->post('add-book', 'BookController::addBook'); // Belom
-        $routes->put('change-book', 'BookController::changeBook'); // Belom
+        $routes->get('katalog', 'BookController::katalog'); // Belom
+        $routes->get('tambah', 'BookController::tambahBuku');
+        $routes->get('ubah/(:num)', 'BookController::ubahBuku/$1'); 
+        $routes->post('add-book', 'BookController::addBook');
+        $routes->put('change-book/(:num)', 'BookController::changeBook/$1');
     });
 });
 
