@@ -177,6 +177,22 @@ header {
   }
 }
 
+.error-container {
+  border: 1px solid rgb(255, 128, 128);
+  border-radius: 5px;
+  background-color: rgb(255, 192, 192);
+  color: rgb(224, 0, 0);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 3em;
+  margin-bottom: 0.75em;
+
+  ul {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+}
+
 .login-container {
   position: fixed;
   left: 50%;

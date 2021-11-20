@@ -40,7 +40,7 @@ class UserModel extends Model
       'min_length' => 'Kata sandi minimal 8 karakter!'
     ],
     'confirm_password' => [
-      'required' => 'Kata sandi harus diisi!',
+      'required' => 'Pengulangan kata sandi harus diisi!',
       'matches' => 'Pengulangan kata sandi tidak cocok dengan kata sandi baru!'
     ],
   ];

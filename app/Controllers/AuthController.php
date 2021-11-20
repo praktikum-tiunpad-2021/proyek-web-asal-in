@@ -22,6 +22,7 @@ class AuthController extends BaseController
     $data = [
       'pageTitle' => 'Masuk | ' . SITE_TITLE,
       'disableNavbar' => true,
+      'errors' => \Config\Services::validation(),
     ];
     return view('auth/masuk', $data);
   }
@@ -38,7 +39,7 @@ class AuthController extends BaseController
 
     $user = $this->userModel->find($this->request->getPost('user_id'));
     if (!$user || !password_verify($this->request->getPost('password'), $user['password'])){
-      return redirect()->to(base_url('masuk'));
+      return redirect()->to(base_url('masuk'))->withInput()->with('errors', 'Nomor anggota atau password salah!');
     }
 
     if ($this->request->getPost('stay_logged_in') == 'on'){
@@ -75,6 +76,7 @@ class AuthController extends BaseController
     $data = [
       'pageTitle' => 'Daftar | ' . SITE_TITLE,
       'disableNavbar' => true,
+      'errors' => \Config\Services::validation(),
     ];
     return view('auth/daftar', $data);
   }

@@ -190,6 +190,22 @@ header .button-container button {
   padding: 0.5em 1em;
 }
 
+.error-container {
+  border: 1px solid #ff8080;
+  border-radius: 5px;
+  background-color: #ffc0c0;
+  color: #e00000;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 3em;
+  margin-bottom: 0.75em;
+}
+
+.error-container ul {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
 .login-container {
   position: fixed;
   left: 50%;

@@ -7,6 +7,7 @@
     </div>
 
     <form class="border" action="/signup" method="POST">
+        <?= $this->include('/layout/error'); ?>
         <div class="form-item">
             <span><label for="name">Nama</label><strong>*</strong></span>
             <input type="text" id="name" name="name" value="<?= old('name') ? old('name') : '' ?>">

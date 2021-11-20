@@ -6,6 +6,7 @@
         <h1>MASUK</h1>
     </div>
     <form class="border" action="/login" method="POST">
+        <?= $this->include('/layout/error'); ?>
         <div class="form-item">
             <label for="user_id">Nomor Anggota</label>
             <input type="text" id="user_id" name="user_id" autofocus value="<?= old('user_id') ? old('user_id') : '' ?>">
