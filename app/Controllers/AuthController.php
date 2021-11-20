@@ -34,12 +34,12 @@ class AuthController extends BaseController
     $messages = $this->userModel->getValidationMessages();
 
     if (!$this->validate($rules, $messages)) {
-      return redirect()->to(base_url('masuk'))->withInput();
+      return redirect()->back()->withInput();
     }
 
     $user = $this->userModel->find($this->request->getPost('user_id'));
     if (!$user || !password_verify($this->request->getPost('password'), $user['password'])){
-      return redirect()->to(base_url('masuk'))->withInput()->with('errors', 'Nomor anggota atau password salah!');
+      return redirect()->back()->withInput()->with('errors', 'Nomor anggota atau password salah!');
     }
 
     if ($this->request->getPost('stay_logged_in') == 'on'){
@@ -90,7 +90,7 @@ class AuthController extends BaseController
     $messages = array_merge($this->userModel->getValidationMessages(), $this->userProfileModel->getValidationMessages());
 
     if (!$this->validate($rules, $messages)) {
-      return redirect()->to(base_url('daftar'))->withInput();
+      return redirect()->back()->withInput();
     }
 
     $id = $this->userModel->createUser($this->request->getPost());
