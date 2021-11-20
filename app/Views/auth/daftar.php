@@ -15,7 +15,7 @@
 
         <div class="form-item">
             <span><label for="gender">Jenis Kelamin</label></span>
-            <input type="radio" name="gender" id="" value="" checked hidden>
+            <input type="radio" name="gender" id="null" value="null" checked hidden>
             <span>
                 <input type="radio" name="gender" id="m" value="m">
                 <label for="m">Laki-laki</label>
@@ -39,7 +39,7 @@
         <div class="form-item">
             <span><label for="status">Status</label></span>
             <select name="status" id="status">
-                <option value="" selected>Pilih</option>
+                <option value="null" selected>Pilih</option>
                 <option value="Pelajar">Pelajar</option>
                 <option value="Mahasiswa">Mahasiswa</option>
                 <option value="Umum">Umum</option>
