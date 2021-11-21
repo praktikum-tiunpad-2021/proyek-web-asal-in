@@ -184,12 +184,6 @@ header .button-container {
   margin-left: 1em;
 }
 
-header .button-container button {
-  font-weight: 600;
-  font-size: medium;
-  padding: 0.5em 1em;
-}
-
 .error-container {
   border: 1px solid #ff8080;
   border-radius: 5px;
@@ -246,5 +240,25 @@ header .button-container button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container h1 {
+  padding: 1em 0 0.5em 0;
+}
+
+.container table {
+  border-collapse: collapse;
+}
+
+.container table td, .container table th {
+  padding: 5px 7px;
+}
+
+.container table td {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.container table th {
+  border-bottom: 2px solid black;
 }
 /*# sourceMappingURL=style.css.map */
