@@ -54,11 +54,13 @@ html, body {
 }
 
 .btn {
+  display: inline-block;
   border-bottom: none;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   padding: 0.5em 1.25em;
+  margin: 0.1em;
   font-size: medium;
   font-weight: bold;
   -webkit-transition: 0.15s;
