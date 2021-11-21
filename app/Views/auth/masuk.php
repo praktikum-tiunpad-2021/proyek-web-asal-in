@@ -5,8 +5,10 @@
     <div class="header-box bright">
         <h1>MASUK</h1>
     </div>
-    <form class="border" action="/login" method="POST">
+    <form class="border" action="<?= base_url('login') ?>" method="POST">
         <?= $this->include('/layout/error'); ?>
+        <?= csrf_field(); ?>
+
         <div class="form-item">
             <label for="user_id">Nomor Anggota</label>
             <input type="text" id="user_id" name="user_id" autofocus value="<?= old('user_id') ? old('user_id') : '' ?>">

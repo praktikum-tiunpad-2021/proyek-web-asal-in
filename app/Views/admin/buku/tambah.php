@@ -8,6 +8,8 @@
 
     <form class="border" action="<?= base_url('admin/buku/add-book') ?>" method="POST">
         <?= $this->include('/layout/error'); ?>
+        <?= csrf_field(); ?>
+
         <div class="form-item">
             <span><label for="isbn">ISBN 13</label><strong>*</strong></span>
             <input type="number" id="isbn" name="isbn" value="<?= old('isbn') ? old('isbn') : '' ?>">

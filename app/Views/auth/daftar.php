@@ -6,8 +6,10 @@
         <h1>Formulir Pendaftaran Anggota</h1>
     </div>
 
-    <form class="border" action="/signup" method="POST">
+    <form class="border" action="<?= base_url('signup') ?>" method="POST">
         <?= $this->include('/layout/error'); ?>
+        <?= csrf_field(); ?>
+
         <div class="form-item">
             <span><label for="name">Nama</label><strong>*</strong></span>
             <input type="text" id="name" name="name" value="<?= old('name') ? old('name') : '' ?>">
