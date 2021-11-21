@@ -8,8 +8,19 @@
   <div style="margin-bottom: 2em;">
     <a href="<?= base_url('admin/buku/tambah'); ?>" class="btn very-bright">Tambah buku</a>
   </div>
-  <div>
-    <table>
+  <div style="overflow-x: auto;">
+    <table style="width: 100%; min-width: 1000px">
+      <colgroup>
+        <col>
+        <col>
+        <col style="width:40%">
+        <col>
+        <col>
+        <col style="width:13%;">
+        <col>
+        <col style="width:15%">
+        <col style="width:fit-content">
+      </colgroup>
       <tr>
         <th scope="col">No.</th>
         <th scope="col">ISBN 13</th>
@@ -17,7 +28,7 @@
         <th scope="col">Pengarang</th>
         <th scope="col">Penerbit</th>
         <th scope="col">Tanggal Terbit</th>
-        <th scope="col">Halaman</th>
+        <th scope="col">Hlm</th>
         <th scope="col">Status</th>
         <th scope="col">Aksi</th>
       </tr>
@@ -28,9 +39,19 @@
         <td><?= $book['author']; ?></td>
         <td><?= $book['publisher']; ?></td>
         <td><?= $book['publication_date']; ?></td>
-        <td><?= $book['pages']; ?></td>
-        <td><?= $book['status']; ?></td>
-        <td><a href="<?= base_url('admin/buku/ubah/' . $book['book_id']); ?>" class="btn very-bright">Ubah</a></td>
+        <td style="text-align:center"><?= $book['pages']; ?></td>
+        <td style="text-align:center">
+          <?php if ($book['status'] == 'AVALIABLE'): ?>
+            Tersedia
+          <?php elseif ($book['status'] == 'BORROWED'): ?>
+            Dipesan
+          <?php elseif ($book['status'] == 'BOOKED'): ?>
+            Dipinjam
+          <?php else: ?>
+            Tidak Tersedia
+          <?php endif; ?>
+        </td>
+        <td style="text-align:center"><a href="<?= base_url('admin/buku/ubah/' . $book['book_id']); ?>" class="btn very-bright">Ubah</a></td>
       <?php endforeach; ?>
     </table>
   </div>
