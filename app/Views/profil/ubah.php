@@ -5,9 +5,9 @@
     <div class="header-box bright">
         <h1>Ubah Profil</h1>
     </div>
-    <form class="border" action="<?= base_url('user/profil/save-profile/')?>" method="PUT">
+    <form class="border" action="<?= base_url('profiluser/profil/save-profile/')?>" method="PUT">
       
-      <div class="form-item">
+        <div class="form-item">
             <span><label for="name">Nama</label><strong>*</strong></span>
             <input type="text" id="name" name="name" value="<?= old('name') ? old('name') : $userData['name'] ?>">
         </div>
