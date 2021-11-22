@@ -17,7 +17,7 @@
 
         <div class="form-item">
             <span><label for="gender">Jenis Kelamin</label></span>
-            <input type="radio" name="gender" id="null" value="null" checked hidden>
+       <!--     <input type="radio" name="gender" id="null" value="null" checked hidden> -->
             <span>
                 <input type="radio" name="gender" id="m" value="m">
                 <label for="m">Laki-laki</label>
