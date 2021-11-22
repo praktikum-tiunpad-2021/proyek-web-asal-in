@@ -2,14 +2,17 @@
 
 namespace App\Controllers;
 use App\Models\BookModel;
+use App\Models\BorrowLogModel;
 
 class BookController extends BaseController
 {
   protected $bookModel;
+  protected $borrowLogModel;
 
   public function __construct()
   {
     $this->bookModel = new BookModel();
+    $this->borrowLogModel = new BorrowLogModel();
   }
 
   public function katalog()
@@ -30,6 +33,7 @@ class BookController extends BaseController
     $data = [
       'bookData' => $bookData,
       'pageTitle' => $bookData['name'] . ' | ' . SITE_TITLE,
+      'borrowData' => $this->borrowLogModel->getBorrowLogData($id),
     ];
     return view('buku/detail', $data);
   }
