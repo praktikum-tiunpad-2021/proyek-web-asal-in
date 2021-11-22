@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <main class="container round-border">
     <div class="header-box bright">
-        <h1>Formulir Penambahan Buku</h1>
+        <h1>Formulir Edit Buku</h1>
     </div>
 
     <form class="border" action="<?= base_url('admin/buku/change-book/' . $bookData['book_id']) ?>" method="PUT">
