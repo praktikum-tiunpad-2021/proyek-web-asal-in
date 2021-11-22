@@ -13,19 +13,6 @@ span {
 <main class="container">
   <h1>Profil</h1>
   <?php d($userData); ?>
-<!--
-  <div style="display:inline-block;">
-    <div class="col-lg-8 px-0 px-lg-3">
-      <div class="card shadow w-100">
-        <div class="p-4">
-          <h4 class="font-weight-bold mb-2">
-    
-    
-        </div>
-      </div>
-    </div>
-
--->
   
   <div>
     <div>

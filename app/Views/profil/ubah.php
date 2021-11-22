@@ -5,7 +5,7 @@
     <div class="header-box bright">
         <h1>Ubah Profil</h1>
     </div>
-    <form class="border" action="<?= base_url('user/profil/ubah/'. $userData['user_id'])?>" method="PUT">
+    <form class="border" action="<?= base_url('user/profil/save-profile/')?>" method="PUT">
       
       <div class="form-item">
             <span><label for="name">Nama</label><strong>*</strong></span>
