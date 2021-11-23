@@ -11,9 +11,7 @@ span {
 }
 </style>
 <main class="container">
-  <h1>Profil</h1>
-  <?php d($userData); ?>
-  
+  <h1 class="header-padding">Profil</h1>
   <div>
     <div>
       <span>Nama</span><?= $userData['name']; ?>

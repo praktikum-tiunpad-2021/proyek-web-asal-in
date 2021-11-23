@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 <main class="container">
-  <h1>
+  <h1 class="header-padding">
     Katalog Buku
   </h1>
   <div>

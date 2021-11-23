@@ -14,7 +14,7 @@ span {
 
 <?= $this->section('content'); ?>
 <main class="container">
-  <h1>
+  <h1 class="header-padding">
     Detail Buku
   </h1>
 
@@ -39,7 +39,7 @@ span {
     </div>
   </div>
 
-  <h1>
+  <h1 class="header-padding">
     Riwayat Peminjaman
   </h1>
 
