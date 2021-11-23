@@ -32,9 +32,9 @@
           <?php if ($book['status'] == 'AVALIABLE'): ?>
             Tersedia
           <?php elseif ($book['status'] == 'BORROWED'): ?>
-            Dipesan
-          <?php elseif ($book['status'] == 'BOOKED'): ?>
             Dipinjam
+          <?php elseif ($book['status'] == 'BOOKED'): ?>
+            Dipesan
           <?php else: ?>
             Tidak Tersedia
           <?php endif; ?>
