@@ -46,7 +46,7 @@ class BookController extends BaseController
     return redirect()->to('admin/buku/katalog');
   }
 
-  public function ubahBuku($id = 1)
+  public function ubahBuku($id)
   {
     $data = [
       'pageTitle' => 'Ubah Buku | ' . SITE_TITLE,
