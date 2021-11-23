@@ -10,6 +10,8 @@ class UserProfileModel extends Model
   protected $primaryKey = 'user_id';
 
   protected $allowedFields = ['user_id', 'name', 'gender', 'date_of_birth', 'address', 'status', 'institution_name', 'phone_number'];
+  protected $beforeInsert = ['setNulls'];
+  protected $beforeUpdate = ['setNulls'];
 
   protected $dynamicRules = [
     'signup' => [
@@ -28,10 +30,21 @@ class UserProfileModel extends Model
     $this->setValidationRules($this->dynamicRules[$rules]);
   }
 
+  public function setNulls($data)
+  {
+    if (!isset($data['data']['gender'])) $data['data']['gender'] = null;
+    if ($data['data']['date_of_birth'] == "") $data['data']['date_of_birth'] = null;
+    if ($data['data']['address'] == "") $data['data']['address'] = null;
+    if ($data['data']['status'] == "") $data['data']['status'] = null;
+    if ($data['data']['institution_name'] == "") $data['data']['institution_name'] = null;
+    if ($data['data']['phone_number'] == "") $data['data']['phone_number'] = null;
+
+    return $data;
+  }
+
   public function createUserProfile($id, $data)
   {
     $data['user_id'] = $id;
-    $this->setValidationRules([]);
     $this->insert($data);
   }
 }

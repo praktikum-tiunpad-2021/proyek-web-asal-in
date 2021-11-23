@@ -17,14 +17,13 @@
 
         <div class="form-item">
             <span><label for="gender">Jenis Kelamin</label></span>
-       <!--     <input type="radio" name="gender" id="null" value="null" checked hidden> -->
             <span>
-                <input type="radio" name="gender" id="m" value="m">
-                <label for="m">Laki-laki</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Laki-laki</label>
             </span>
             <span>
-                <input type="radio" name="gender" id="f" value="f">
-                <label for="f">Perempuan</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Perempuan</label>
             </span>
         </div>
         
@@ -35,13 +34,13 @@
 
         <div class="form-item">
             <span><label for="address">Alamat</label></span>
-            <textarea id="address"><?= old('address') ? old('address') : '' ?></textarea>
+            <textarea id="address" name="address"><?= old('address') ? old('address') : '' ?></textarea>
         </div>
         
         <div class="form-item">
             <span><label for="status">Status</label></span>
             <select name="status" id="status">
-                <option value="null" selected>Pilih</option>
+                <option value="" selected>Pilih</option>
                 <option value="Pelajar">Pelajar</option>
                 <option value="Mahasiswa">Mahasiswa</option>
                 <option value="Umum">Umum</option>
