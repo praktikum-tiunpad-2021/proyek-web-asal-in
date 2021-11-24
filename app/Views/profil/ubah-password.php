@@ -5,8 +5,6 @@
     <div class="header-box bright">
         <h1>Ubah Email dan Password</h1>
     </div>
-    
-      <?php d($email); ?>
       <form class="border" action="<?= base_url('profil/ubah-password/')?>" method="PUT">
         <div class="form-item">
             <span><label for="email">Email</label><strong>*</strong></span>
