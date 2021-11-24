@@ -58,6 +58,7 @@ span {
           <th scope="col">Status</th>
         </tr>
         <?php $i = 1; foreach($borrowItem as $borrowData): ?>
+        <tr>
           <td scope="row" style="text-align:center"><?= $i; ?></td>
           <td><?= $borrowItem['name']; ?></td>
           <td><?= $book['borrowing_date']; ?></td>
@@ -71,7 +72,8 @@ span {
               Dipesan
             <?php endif; ?>
           </td>
-        <?php endforeach; ?>
+        </tr>
+        <?php $i++; endforeach; ?>
       </table>
     </div>
   <?php else: ?>

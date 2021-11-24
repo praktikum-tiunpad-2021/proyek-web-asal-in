@@ -33,6 +33,7 @@
         <th scope="col">Aksi</th>
       </tr>
       <?php $i = 1; foreach($books as $book): ?>
+      <tr>
         <td scope="row"><?= $i; ?></td>
         <td style="font-size: 0.75em;"><?= $book['isbn']; ?></td>
         <td><?= $book['name']; ?></td>
@@ -52,7 +53,8 @@
           <?php endif; ?>
         </td>
         <td style="text-align:center"><a href="<?= base_url('admin/buku/ubah/' . $book['book_id']); ?>" class="btn very-bright">Ubah</a></td>
-      <?php endforeach; ?>
+      </tr>
+      <?php $i++; endforeach; ?>
     </table>
   </div>
 </main>

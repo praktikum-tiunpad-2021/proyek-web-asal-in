@@ -24,6 +24,7 @@
         <th scope="col">Aksi</th>
       </tr>
       <?php $i = 1; foreach($books as $book): ?>
+      <tr>
         <td scope="row" style="text-align:center"><?= $i; ?></td>
         <td style="font-size: 0.75em; text-align:center"><?= $book['isbn']; ?></td>
         <td><?= $book['name']; ?></td>
@@ -45,7 +46,8 @@
             <a class="btn very-bright">Pinjam</a>
           <?php endif; ?>
         </td>
-      <?php endforeach; ?>
+      </tr>
+      <?php $i++; endforeach; ?>
     </table>
   </div>
 </main>
