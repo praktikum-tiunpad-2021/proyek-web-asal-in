@@ -11,7 +11,7 @@ class BorrowLogModel extends Model
   protected $useAutoIncrement = true;
   protected $createdField = 'reservation_date';
 
-  protected $allowedFields = ['book_id', 'user_id ', 'borrowing_date', 'returning_date', 'status'];
+  protected $allowedFields = ['book_id', 'user_id', 'borrowing_date', 'returning_date', 'status'];
 
   public function getBorrowLogData($id)
   {
