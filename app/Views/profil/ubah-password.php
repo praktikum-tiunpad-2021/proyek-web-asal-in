@@ -22,7 +22,7 @@
         </div>
 
         <div class="form-item">
-            <span><label for="confirm_password">Konfirmasi Password Baru</label><strong>*</strong></span>
+            <span><label for="confirm_password">Konfirmasi Password Baru<strong>*</strong></label></span>
             <input type="password" id="confirm_password" name="confirm_password">
         </div>
         
