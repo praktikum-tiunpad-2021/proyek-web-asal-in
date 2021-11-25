@@ -32,7 +32,7 @@ class BookController extends BaseController
 
     $data = [
       'bookData' => $bookData,
-      'pageTitle' => $bookData['name'] . ' | ' . SITE_TITLE,
+      'pageTitle' => $bookData['title'] . ' | ' . SITE_TITLE,
       'borrowData' => $this->borrowLogModel->getBorrowLogData($id),
     ];
     return view('buku/detail', $data);
@@ -45,6 +45,7 @@ class BookController extends BaseController
       'user_id' => session()->userData['user_id'],
       'status' => 'BOOKED',
     ]);
+    $this->bookModel->update($id, ['status' => 'BOOKED']);
 
     return redirect()->back();
   }
