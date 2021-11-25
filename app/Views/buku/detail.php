@@ -44,7 +44,7 @@ span {
   </h1>
 
   <?php if (!empty($borrowData)): ?>
-    <div>
+    <div style="overflow-x: auto;">
       <table style="width:100%;">
         <colgroup>
           <col>

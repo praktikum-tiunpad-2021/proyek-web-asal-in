@@ -3,9 +3,17 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\BorrowLogModel;
 
 class Home extends BaseController
 {
+  protected $borrowLogModel;
+
+  public function __construct()
+  {
+    $this->borrowLogModel = new BorrowLogModel();
+  }
+
   public function index()
   {
     $data = [
@@ -13,5 +21,15 @@ class Home extends BaseController
     ];
     
     return view('admin/home', $data);
+  }
+
+  public function daftarSemuaPeminjaman()
+  {
+    $data = [
+      'pageTitle' => 'Daftar Semua Peminjaman' .  SITE_TITLE,
+      'borrowData' => $this->borrowLogModel->getAllBorrowLogData(),
+    ];
+
+    return view('admin/peminjaman', $data);
   }
 }

@@ -65,6 +65,8 @@ $routes->group('', ['filter' => 'user'], function ($routes) {
 });
 
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'admin'], function ($routes) {
+    $routes->get('peminjaman', 'Home::daftarSemuaPeminjaman');
+
     $routes->group('buku', function ($routes) {
         $routes->get('katalog', 'BookController::katalog'); // Belom
         $routes->get('tambah', 'BookController::tambahBuku');
