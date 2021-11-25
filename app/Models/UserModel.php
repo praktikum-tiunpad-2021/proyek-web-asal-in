@@ -10,7 +10,7 @@ class UserModel extends Model
   protected $primaryKey = 'user_id';
   protected $useAutoIncrement = true;
 
-  protected $allowedFields = ['email', 'password', 'role', 'borrowed_book_count', 'in_progress_count'];
+  protected $allowedFields = ['email', 'password', 'role'];
   protected $beforeInsert = ['hashPassword'];
   protected $beforeUpdate = ['hashPassword'];
 
@@ -60,15 +60,6 @@ class UserModel extends Model
 
   public function createUser($data)
   {
-    $data = array_merge(
-      $data,
-      [
-        'role' => 'USER',
-        'borrowed_book_count' => 0,
-        'in_progress_count' => 0,
-      ]
-    );
-
     $this->setValidationRules([]);
     return $this->insert($data);
   }
