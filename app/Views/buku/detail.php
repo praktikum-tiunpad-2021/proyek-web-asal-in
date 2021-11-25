@@ -57,12 +57,12 @@ span {
           <th scope="col">Tanggal Pengembalian</th>
           <th scope="col">Status</th>
         </tr>
-        <?php $i = 1; foreach($borrowItem as $borrowData): ?>
+        <?php $i = 1; foreach($borrowData as $borrowItem): ?>
         <tr>
           <td scope="row" style="text-align:center"><?= $i; ?></td>
-          <td><?= $borrowItem['name']; ?></td>
-          <td><?= $borrowItem['borrowing_date']; ?></td>
-          <td><?= $borrowItem['returning_date']; ?></td>
+          <td style="text-align:center"><?= $borrowItem['name']; ?></td>
+          <td style="text-align:center"><?= $borrowItem['borrowing_date']; ?></td>
+          <td style="text-align:center"><?= $borrowItem['returning_date']; ?></td>
           <td style="text-align:center">
             <?php if ($borrowItem['status'] == 'RETURNED'): ?>
               Dikembalikan
