@@ -61,14 +61,14 @@ span {
         <tr>
           <td scope="row" style="text-align:center"><?= $i; ?></td>
           <td><?= $borrowItem['name']; ?></td>
-          <td><?= $book['borrowing_date']; ?></td>
-          <td><?= $book['returning_date']; ?></td>
+          <td><?= $borrowItem['borrowing_date']; ?></td>
+          <td><?= $borrowItem['returning_date']; ?></td>
           <td style="text-align:center">
-            <?php if ($book['status'] == 'RETURNED'): ?>
+            <?php if ($borrowItem['status'] == 'RETURNED'): ?>
               Dikembalikan
-            <?php elseif ($book['status'] == 'IN_PROGRESS'): ?>
+            <?php elseif ($borrowItem['status'] == 'IN_PROGRESS'): ?>
               Dipinjam
-              <?php elseif ($book['status'] == 'BOOKED'): ?>
+              <?php elseif ($borrowItem['status'] == 'BOOKED'): ?>
               Dipesan
             <?php endif; ?>
           </td>
