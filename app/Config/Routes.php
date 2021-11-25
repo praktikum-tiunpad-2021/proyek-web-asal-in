@@ -42,25 +42,24 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 });
 
 $routes->group('buku', function ($routes) {
-    $routes->get('katalog', 'BookController::katalog'); // Belom
-    $routes->get('detail/(:num)', 'BookController::detail/$1'); // Belom
+    $routes->get('katalog', 'BookController::katalog');
+    $routes->get('detail/(:num)', 'BookController::detail/$1');
 });
 
 $routes->group('', ['filter' => 'user'], function ($routes) {
     $routes->get('logout', 'AuthController::logout');
 
     $routes->group('profil', function ($routes) {
-        $routes->get('', 'ProfileController::index'); // Belom
-        $routes->get('ubah', 'ProfileController::ubahProfil'); // Belom
-        $routes->get('ubah-password', 'ProfileController::ubahPassword'); // Belom
+        $routes->get('', 'ProfileController::index');
+        $routes->get('ubah', 'ProfileController::ubahProfil');
+        $routes->get('ubah-password', 'ProfileController::ubahPassword');
 
-        $routes->put('save-profile', 'ProfileController::saveProfile'); // Belom
-        $routes->put('save-password', 'ProfileController::savePassword'); // Belom
+        $routes->put('save-profile', 'ProfileController::saveProfile'); // Nggak jalan
+        $routes->put('save-password', 'ProfileController::savePassword'); // Nggak jalan
     });
 
     $routes->group('buku', function ($routes) {
         $routes->post('pinjam', 'BookController::pinjam'); // Belom
-        $routes->get('daftar-peminjaman', 'BookController::daftarPeminjaman'); // Belom
     });
 });
 
@@ -68,7 +67,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'ad
     $routes->get('peminjaman', 'Home::daftarSemuaPeminjaman');
 
     $routes->group('buku', function ($routes) {
-        $routes->get('katalog', 'BookController::katalog'); // Belom
+        $routes->get('katalog', 'BookController::katalog');
         $routes->get('tambah', 'BookController::tambahBuku');
         $routes->get('ubah/(:num)', 'BookController::ubahBuku/$1'); 
         $routes->post('add-book', 'BookController::addBook');
