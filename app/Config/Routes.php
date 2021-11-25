@@ -59,7 +59,7 @@ $routes->group('', ['filter' => 'user'], function ($routes) {
     });
 
     $routes->group('buku', function ($routes) {
-        $routes->post('pinjam', 'BookController::pinjam'); // Belom
+        $routes->get('pinjam/(:num)', 'BookController::pinjam/$1'); // Nggak jalan
     });
 });
 

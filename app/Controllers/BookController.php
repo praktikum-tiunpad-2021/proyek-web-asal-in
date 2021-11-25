@@ -37,4 +37,15 @@ class BookController extends BaseController
     ];
     return view('buku/detail', $data);
   }
+
+  public function pinjam($id)
+  {
+    $this->borrowLogModel->insert([
+      'book_id' => $id,
+      'user_id' => session()->userData['user_id'],
+      'status' => 'BOOKED',
+    ]);
+
+    return redirect()->back();
+  }
 };

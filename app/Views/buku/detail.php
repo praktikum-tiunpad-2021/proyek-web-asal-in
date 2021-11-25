@@ -39,6 +39,8 @@ span {
     </div>
   </div>
 
+  <a href="<?= base_url('buku/pinjam/' . $bookData['book_id']); ?>" class="btn very-bright">Pinjam</a>
+
   <h1 class="header-padding">
     Riwayat Peminjaman
   </h1>
