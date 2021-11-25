@@ -16,8 +16,8 @@
         </div>
 
         <div class="form-item">
-            <span><label for="name">Judul Buku</label><strong>*</strong></span>
-            <input type="text" id="name" name="name" value="<?= old('name') ? old('name') : '' ?>">
+            <span><label for="title">Judul Buku</label><strong>*</strong></span>
+            <input type="text" id="title" name="title" value="<?= old('title') ? old('title') : '' ?>">
         </div>
 
         <div class="form-item">

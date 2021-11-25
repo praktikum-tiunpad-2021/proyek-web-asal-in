@@ -36,7 +36,7 @@
       <tr>
         <td scope="row"><?= $i; ?></td>
         <td style="font-size: 0.75em;"><?= $book['isbn']; ?></td>
-        <td><?= $book['name']; ?></td>
+        <td><?= $book['title']; ?></td>
         <td><?= $book['author']; ?></td>
         <td><?= $book['publisher']; ?></td>
         <td><?= $book['publication_date']; ?></td>

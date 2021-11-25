@@ -20,7 +20,7 @@ span {
 
   <div>
     <div>
-      <span>Judul</span><?= $bookData['name']; ?>
+      <span>Judul</span><?= $bookData['title']; ?>
     </div>
     <div>
       <span>Penulis</span><?= $bookData['author']; ?>

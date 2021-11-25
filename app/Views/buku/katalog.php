@@ -27,7 +27,7 @@
       <tr>
         <td scope="row" style="text-align:center"><?= $i; ?></td>
         <td style="font-size: 0.75em; text-align:center"><?= $book['isbn']; ?></td>
-        <td><?= $book['name']; ?></td>
+        <td><?= $book['title']; ?></td>
         <td><?= $book['author']; ?></td>
         <td style="text-align:center">
           <?php if ($book['status'] == 'AVALIABLE'): ?>

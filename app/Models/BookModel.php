@@ -10,11 +10,11 @@ class BookModel extends Model
   protected $primaryKey = 'book_id';
   protected $useAutoIncrement = true;
 
-  protected $allowedFields = ['isbn', 'name', 'author', 'publisher', 'publication_date', 'pages', 'status'];
+  protected $allowedFields = ['isbn', 'title', 'author', 'publisher', 'publication_date', 'pages', 'status'];
 
   protected $validationRules = [
     'isbn' => 'required',
-    'name' => 'required',
+    'title' => 'required',
     'author' => 'required',
     'publisher' => 'required',
     'publication_date' => 'required|valid_date',
@@ -26,7 +26,7 @@ class BookModel extends Model
     'isbn' => [
       'required' => 'ISBN harus diisi!',
     ],
-    'name' => [
+    'title' => [
       'required' => 'Judul buku harus diisi!',
     ],
     'author' => [

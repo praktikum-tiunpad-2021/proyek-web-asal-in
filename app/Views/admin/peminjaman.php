@@ -21,7 +21,7 @@
         <tr>
           <th scope="col">No.</th>
           <th scope="col">Nama Peminjam</th>
-          <th scope="col">Nama Buku</th>
+          <th scope="col">Judul Buku</th>
           <th scope="col">Tanggal Pengajuan</th>
           <th scope="col">Tanggal Peminjaman</th>
           <th scope="col">Tanggal Pengembalian</th>
@@ -32,7 +32,7 @@
         <tr>
           <td scope="row" style="text-align:center"><?= $i; ?></td>
           <td><?= $borrowItem['user_name']; ?></td>
-          <td><a href="<?= base_url('buku/detail/' . $borrowItem['book_id']); ?>"><?= $borrowItem['book_name']; ?></a></td>
+          <td><a href="<?= base_url('buku/detail/' . $borrowItem['book_id']); ?>"><?= $borrowItem['book_title']; ?></a></td>
           <td style="text-align:center"><?= $borrowItem['reservation_date']; ?></td>
           <td style="text-align:center"><?= $borrowItem['borrowing_date'] ? $borrowItem['borrowing_date'] : '-'; ?></td>
           <td style="text-align:center"><?= $borrowItem['returning_date']; ?></td>
