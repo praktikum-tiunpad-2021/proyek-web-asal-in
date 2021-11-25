@@ -5,8 +5,10 @@
     <div class="header-box bright">
         <h1>Ubah Profil</h1>
     </div>
-    <form class="border" action="<?= base_url('profiluser/profil/save-profile/')?>" method="PUT">
-      
+    <form class="border" action="<?= base_url('profil/save-profile')?>" method="PUT">
+        <?= $this->include('/layout/error'); ?>
+        <?= csrf_field(); ?>
+
         <div class="form-item">
             <span><label for="name">Nama</label><strong>*</strong></span>
             <input type="text" id="name" name="name" value="<?= old('name') ? old('name') : $userData['name'] ?>">
@@ -55,9 +57,10 @@
             <span><label for="phone_number">Nomor Telepon</label></span>
             <input type="number" id="phone_number" name="phone_number" value="<?= old('phone_number') ? old('phone_number') : $userData['phone_number'] ?>">
         </div>
+
         <div class="form-item" style="justify-content:space-evenly">
-        <input type="submit" class="btn very-bright" name="add" value="Ubah Profil">
-    </div>
-</form>
+            <input type="submit" class="btn very-bright" name="add" value="Ubah Profil">
+        </div>
+    </form>
 </main>
 <?= $this->endSection('content'); ?>

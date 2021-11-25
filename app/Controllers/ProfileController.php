@@ -30,8 +30,24 @@ class ProfileController extends BaseController
     $data = [
       'pageTitle' => 'Ubah Profil | ' . SITE_TITLE,
       'userData' => $this->userProfileModel->find(session()->userData['user_id']),
+      'errors' => \Config\Services::validation(),
     ];
     return view('profil/ubah', $data);
+  }
+
+  public function saveProfile()
+  {
+    $this->userProfileModel->setDynamicRules('signup');
+
+    $rules = $this->userProfileModel->getValidationRules();
+    $messages = $this->userProfileModel->getValidationMessages();
+
+    if (!$this->validate($rules, $messages)) {
+      return redirect()->back()->withInput();
+    }
+
+    $this->userProfileModel->update(session()->userData['user_id'], $this->request->getVar());
+    return redirect()->to(base_url('profil'));
   }
 
   public function ubahPassword()
