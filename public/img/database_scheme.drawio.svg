@@ -192,7 +192,7 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 212px; height: 1px; padding-top: 275px; margin-left: 86px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: left; max-height: 46px; overflow: hidden; ">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #1D3557; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; ">
-                                status enum('BOOKED', 'BORROWED', 'AVALIABLE', 'UNAVALIABLE') NOT NULL
+                                status enum('BOOKED', 'BORROWED', 'AVAILABLE', 'UNAVAILABLE') NOT NULL
                             </div>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 222px; height: 1px; padding-top: 305px; margin-left: 776px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: left; max-height: 26px; overflow: hidden; ">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #1D3557; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; ">
-                                gender enum('MALE', '', 'OTHER')
+                                gender enum('MALE', 'FEMALE', 'OTHER')
                             </div>
                         </div>
                     </div>

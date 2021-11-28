@@ -42,7 +42,7 @@
         <td><?= $book['publication_date']; ?></td>
         <td style="text-align:center"><?= $book['pages']; ?></td>
         <td style="text-align:center">
-          <?php if ($book['status'] == 'AVALIABLE'): ?>
+          <?php if ($book['status'] == 'AVAILABLE'): ?>
             Tersedia
           <?php elseif ($book['status'] == 'BORROWED'): ?>
             Dipinjam

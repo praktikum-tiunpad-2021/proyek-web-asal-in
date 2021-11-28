@@ -45,8 +45,8 @@
             <select name="status" id="status" <?= ($bookData['status'] == "BORROWED" || $bookData['status'] == "BOOKED") ? 'disabled' : '' ?> >
                 <option <?= $bookData['status'] == "BORROWED" ? 'selected' : '' ?> value="BORROWED" hidden>Dipinjam</option>
                 <option <?= $bookData['status'] == "BOOKED" ? 'selected' : '' ?> value="BOOKED" hidden>Dipesan</option>
-                <option <?= $bookData['status'] == "UNAVALIABLE" ? 'selected' : '' ?> value="UNAVALIABLE">Tidak Tersedia</option>
-                <option <?= $bookData['status'] == "AVALIABLE" ? 'selected' : '' ?> value="AVALIABLE">Tersedia</option>
+                <option <?= $bookData['status'] == "UNAVAILABLE" ? 'selected' : '' ?> value="UNAVAILABLE">Tidak Tersedia</option>
+                <option <?= $bookData['status'] == "AVAILABLE" ? 'selected' : '' ?> value="AVAILABLE">Tersedia</option>
             </select>
         </div>
 

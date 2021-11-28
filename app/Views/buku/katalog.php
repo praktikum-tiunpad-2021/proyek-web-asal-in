@@ -30,7 +30,7 @@
         <td><?= $book['title']; ?></td>
         <td><?= $book['author']; ?></td>
         <td style="text-align:center">
-          <?php if ($book['status'] == 'AVALIABLE'): ?>
+          <?php if ($book['status'] == 'AVAILABLE'): ?>
             Tersedia
           <?php elseif ($book['status'] == 'BORROWED'): ?>
             Dipinjam
@@ -42,7 +42,7 @@
         </td>
         <td style="text-align:center">
           <a href="<?= base_url('buku/detail/' . $book['book_id']); ?>" class="btn very-bright">Detail</a>
-          <?php if ($book['status'] == 'AVALIABLE' || $book['status'] == 'BOOKED'): ?>
+          <?php if ($book['status'] == 'AVAILABLE' || $book['status'] == 'BOOKED'): ?>
             <a href="<?= base_url('buku/pinjam/' . $book['book_id']); ?>" class="btn very-bright">Pinjam</a>
           <?php endif; ?>
         </td>
