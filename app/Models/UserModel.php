@@ -16,8 +16,8 @@ class UserModel extends Model
 
   protected $dynamicRules = [
     'login' => [
-      'user_id' => 'required',
-      'password' => 'required|min_length[8]'
+      'email' => 'required',
+      'password' => 'required'
     ],
     'signup' => [
       'email' => 'required|is_unique[user.email]|valid_email',

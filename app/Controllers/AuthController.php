@@ -37,7 +37,7 @@ class AuthController extends BaseController
       return redirect()->back()->withInput();
     }
 
-    $user = $this->userModel->find($this->request->getPost('user_id'));
+    $user = $this->userModel->where('email', $this->request->getPost('email'))->first();
     if (!$user || !password_verify($this->request->getPost('password'), $user['password'])){
       return redirect()->back()->withInput()->with('errors', 'Nomor anggota atau password salah!');
     }

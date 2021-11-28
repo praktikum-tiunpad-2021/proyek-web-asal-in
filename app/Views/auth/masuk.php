@@ -10,8 +10,8 @@
         <?= csrf_field(); ?>
 
         <div class="form-item">
-            <label for="user_id">Nomor Anggota</label>
-            <input type="text" id="user_id" name="user_id" autofocus value="<?= old('user_id') ? old('user_id') : '' ?>">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autofocus value="<?= old('email') ? old('email') : '' ?>">
         </div>
         
         <div class="form-item">
