@@ -43,8 +43,8 @@
         <div class="form-item">
             <span><label for="status">Status</label></span>
             <select name="status" id="status">
-                <option value="UNAVALIABLE" selected>Tidak Tersedia</option>
-                <option value="AVALIABLE">Tersedia</option>
+                <option value="UNAVAILABLE" selected>Tidak Tersedia</option>
+                <option value="AVAILABLE">Tersedia</option>
             </select>
         </div>
 
