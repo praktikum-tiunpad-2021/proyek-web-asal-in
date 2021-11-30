@@ -19,7 +19,7 @@ class UserProfile extends Migration
             ],
             'gender' => [
                 'type' => 'ENUM',
-                'constraint' => ['Laki-laki', 'Perempuan', 'Lainnya'],
+                'constraint' => ['MALE', 'FEMALE', 'OTHER'],
                 'null' => true
             ],
             'date_of_birth' => [
