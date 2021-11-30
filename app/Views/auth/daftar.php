@@ -80,5 +80,6 @@
         <input type="submit" class="btn very-bright" name="login" value="Daftar">
         </div>
     </form>
+    <br><br><br><br>
 </main>
 <?= $this->endSection('content'); ?>
