@@ -2,9 +2,23 @@
 
 <?= $this->section('content'); ?>
 <main class="container">
-  <h1 class="header-padding">
-    Katalog Buku
-  </h1>
+  <div class ="row">
+    <div class="col-6">
+      <h1 class="header-padding">
+      Katalog Buku
+      </h1>
+      <form action="">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search.." name="keyword">
+          <!-- <div class="input-group-append"> -->
+            <button class="btn btn-outline-secondary" type="submit">Cari</button>
+          <!-- </div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+
+
   <div>
     <table style="width:100%;">
       <colgroup>
