@@ -73,38 +73,27 @@ html, body {
 }
 
 /* pagination position styling */
-.pagination {
-  position: absolute;
+ul, .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
   margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* pagination styling */
-.pagination a {
-  color: black;
+ul li a, .pagination li a {
   padding: 10px 18px;
   text-decoration: none;
+  color: black;
 }
 
-/* pagination hover effect on non-active */
-.pagination a:hover:not(.active) {
-  background-color: #0077B6;
+ul li :hover, .pagination li :hover {
+  background-color: lightblue;
+}
+
+ul .active a, .pagination .active a {
+  background-color: #0077b6;
   color: white;
-}
-
-/* pagination hover effect on active*/
-a:nth-child(5) {
-  background-color: #023E8A;
-  color: white;
-}
-
-a:nth-child(1) {
-  font-weight: bold;
-}
-
-a:nth-child(7) {
-  font-weight: bold;
 }
 
 input[type=text],

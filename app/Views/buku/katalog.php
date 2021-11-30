@@ -49,7 +49,7 @@
       </tr>
       <?php $i++; endforeach; ?>
     </table>
-    <?= $pager->links('books','book_pagination') ?> 
+    <?= $pager->links() ?> 
   </div>
 </main>
 <?= $this->endSection('content'); ?>
