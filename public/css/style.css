@@ -72,6 +72,41 @@ html, body {
           filter: brightness(0.9);
 }
 
+/* pagination position styling */
+.pagination {
+  position: absolute;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* pagination styling */
+.pagination a {
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+/* pagination hover effect on non-active */
+.pagination a:hover:not(.active) {
+  background-color: #0077B6;
+  color: white;
+}
+
+/* pagination hover effect on active*/
+a:nth-child(5) {
+  background-color: #023E8A;
+  color: white;
+}
+
+a:nth-child(1) {
+  font-weight: bold;
+}
+
+a:nth-child(7) {
+  font-weight: bold;
+}
+
 input[type=text],
 input[type=password],
 input[type=select],

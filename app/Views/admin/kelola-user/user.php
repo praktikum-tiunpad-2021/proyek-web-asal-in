@@ -48,6 +48,7 @@
       </tr>
       <?php $i++; endforeach; ?>
     </table>
+    
     <br><br>
     <HR WIDTH="50%" SIZE="10" NOSHADE>
     <h1 class="header-padding">
@@ -82,6 +83,9 @@
       </tr>
       <?php $i++; endforeach; ?>
     </table>
+    <!--Pager links-->
+    <?= $pager->links('users','user_pagination') ?> 
+
     <br><br><br><br>
   </div>
 </main>
