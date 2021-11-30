@@ -58,6 +58,7 @@
         </tr>
         <?php $i++; endforeach; ?>
       </table>
+    <?= $pager->links() ?> 
     </div>
   <?php endif; ?>
 </main>

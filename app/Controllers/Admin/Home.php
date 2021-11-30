@@ -28,6 +28,7 @@ class Home extends BaseController
     $data = [
       'pageTitle' => 'Daftar Semua Peminjaman' .  SITE_TITLE,
       'borrowData' => $this->borrowLogModel->getAllBorrowLogData(),
+      'pager' => $this->borrowLogModel->pager,
     ];
 
     return view('admin/peminjaman', $data);
