@@ -73,6 +73,14 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'ad
         $routes->post('add-book', 'BookController::addBook');
         $routes->put('change-book/(:num)', 'BookController::changeBook/$1'); // Nggak jalan
     });
+
+    $routes->group('kelola-user', function ($routes) {
+        $routes->get('user', 'UserController::user');
+        $routes->get('tambah', 'UserController::tambahUser');
+        $routes->get('ubah/(:num)', 'UserController::ubahUser/$1'); 
+        $routes->post('add-user', 'UserController::addUser');
+        $routes->put('change-user/(:num)', 'UserController::changeUser/$1'); // Nggak jalan
+    });
 });
 
 /*
