@@ -9,7 +9,9 @@ class BorrowLogModel extends Model
   protected $table = 'borrow_log';
   protected $primaryKey = 'borrow_log_id';
   protected $useAutoIncrement = true;
+  protected $useTimestamps = true;
   protected $createdField = 'reservation_date';
+  protected $updatedField = '';
 
   protected $allowedFields = ['book_id', 'user_id', 'borrowing_date', 'returning_date', 'status'];
 

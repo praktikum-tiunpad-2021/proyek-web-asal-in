@@ -37,8 +37,8 @@ class Book extends Migration
             ],
             'status' => [
                 'type' => 'ENUM',
-                'constraint' => ['BOOKED', 'BORROWED', 'AVAILABLE', 'UNAVAILABLE'],
-                'default' => 'UNAVAILABLE',
+                'constraint' => ['BOOKED', 'BORROWED', 'AVALIABLE', 'UNAVALIABLE'],
+                'default' => 'UNAVALIABLE',
             ],
         ]);
         $this->forge->addPrimaryKey('book_id');
