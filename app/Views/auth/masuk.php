@@ -6,7 +6,7 @@
         <h1>MASUK</h1>
     </div>
     <form class="border" action="<?= base_url('login') ?>" method="POST">
-        <?= $this->include('/layout/error'); ?>
+        <?= $this->include('/layout/form-error'); ?>
         <?= csrf_field(); ?>
 
         <div class="form-item">

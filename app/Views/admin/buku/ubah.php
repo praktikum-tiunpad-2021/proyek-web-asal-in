@@ -7,7 +7,7 @@
     </div>
 
     <form class="border" action="<?= base_url('admin/buku/change-book/' . $bookData['book_id']) ?>" method="PUT">
-        <?= $this->include('/layout/error'); ?>
+        <?= $this->include('/layout/form-error'); ?>
         <?= csrf_field(); ?>
 
         <div class="form-item">

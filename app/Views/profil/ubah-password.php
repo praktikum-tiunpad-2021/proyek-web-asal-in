@@ -6,6 +6,9 @@
         <h1>Ubah Email dan Password</h1>
     </div>
       <form class="border" action="<?= base_url('profil/ubah-password/')?>" method="PUT">
+        <?= $this->include('/layout/form-error'); ?>
+        <?= csrf_field(); ?>
+
         <div class="form-item">
             <span><label for="email">Email</label><strong>*</strong></span>
             <input type="email" id="email" name="email" value="<?= old('email') ? old('email') : $email ?>">
