@@ -226,6 +226,22 @@ header .button-container {
   margin-bottom: 0.25em;
 }
 
+.error-container {
+  border: 1px solid #80ff80;
+  border-radius: 5px;
+  background-color: #c0ffc0;
+  color: #00e000;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 3em;
+  margin-bottom: 0.75em;
+}
+
+.error-container ul {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
 .login-container {
   position: fixed;
   left: 50%;

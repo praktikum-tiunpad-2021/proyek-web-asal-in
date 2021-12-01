@@ -16,6 +16,7 @@
 
 <body>
   <?= $this->include('/layout/navbar'); ?>
+  <?= $this->include('/layout/notice'); ?>
 
   <?= $this->renderSection('content'); ?>
 
