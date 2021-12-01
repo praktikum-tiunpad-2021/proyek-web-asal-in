@@ -1,1 +1,0 @@
-INSERT book VALUES ( , '2341356457256','Mantappu Book','Jerome','PT Mantappucorp','2020-20-11','58','')
