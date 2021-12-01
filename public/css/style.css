@@ -73,7 +73,7 @@ html, body {
 }
 
 /* pagination position styling */
-ul, .pagination {
+.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,17 +81,17 @@ ul, .pagination {
   margin-top: 2em;
 }
 
-ul li a, .pagination li a {
+.pagination li a {
   padding: 10px 18px;
   text-decoration: none;
   color: black;
 }
 
-ul li :hover, .pagination li :hover {
+.pagination li :hover {
   background-color: lightblue;
 }
 
-ul .active a, .pagination .active a {
+.pagination .active a {
   background-color: #0077b6;
   color: white;
 }
