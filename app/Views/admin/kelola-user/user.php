@@ -5,9 +5,9 @@
   <h1 class="header-padding">
     Daftar User
   </h1>
-  <div style="margin-bottom: 2em;">
+  <!-- <div style="margin-bottom: 2em;">
     <a href="<?= base_url('admin/kelola-user/tambah'); ?>" class="btn very-bright">Tambah user</a>
-  </div>
+  </div> -->
   <div style="overflow-x: auto;">
     <table style="width: 100%; min-width: 1000px">
       <colgroup>
