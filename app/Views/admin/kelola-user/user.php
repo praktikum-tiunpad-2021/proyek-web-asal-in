@@ -84,7 +84,7 @@
       <?php $i++; endforeach; ?>
     </table>
     <!--Pager links-->
-    <?= $pager->links('users','user_pagination') ?> 
+    <?= $pager->links('users') ?> 
 
     <br><br><br><br>
   </div>
