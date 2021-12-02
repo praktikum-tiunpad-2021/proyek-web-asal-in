@@ -41,6 +41,19 @@ class BookController extends BaseController
 
   public function pinjam($id)
   {
+    $bookData = $this->bookModel->find($id);
+    if (!$bookData || $bookData['status'] == 'UNAVAILABLE' || $bookData['status'] == 'BOROWED')
+      return view('errors/html/error_404');
+
+    $borrowData = $this->borrowLogModel
+                       ->where(['book_id' => $id, 
+                                'user_id' => session()->userData['user_id'],
+                                'status' => 'BOOKED'
+                              ])
+                       ->findAll();
+
+    if ($borrowData) return redirect()->back()->with('error', 'Kamu telah memesan buku ini!');
+
     $this->borrowLogModel->insert([
       'book_id' => $id,
       'user_id' => session()->userData['user_id'],
@@ -48,6 +61,6 @@ class BookController extends BaseController
     ]);
     $this->bookModel->update($id, ['status' => 'BOOKED']);
 
-    return redirect()->back();
+    return redirect()->back()->with('success', 'Berhasil memesan buku!');
   }
 };
