@@ -26,6 +26,10 @@
                 <input type="radio" name="gender" id="female" value="female">
                 <label for="female">Perempuan</label>
             </span>
+            <span>
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="other">Lainnya</label>
+            </span>
         </div>
         
         <div class="form-item">
