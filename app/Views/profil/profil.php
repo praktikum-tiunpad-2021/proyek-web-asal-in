@@ -17,13 +17,18 @@ span {
       <span>Nama</span><?= $userData['name']; ?>
     </div>
     <div>
-      <span>Jenis Kelamin</span><?= $userData['gender']; ?>
+      <span>Jenis Kelamin</span><?= $userData['gender'] == 'MALE' ? 'Laki-laki' :
+                                    ($userData['gender'] == 'FEMALE' ? 'Perempuan' :
+                                    'Lainnya'); ?>
     </div>
     <div>
       <span>Tanggal Lahir</span><?= $userData['date_of_birth']; ?>
     </div>
     <div>
       <span>Alamat</span><?= $userData['address']; ?>
+    </div>
+    <div>
+      <span>Status</span><?= $userData['status'] != '' ? ucwords(strtolower($userData['status'])) : 'Lainnya' ; ?>
     </div>
     <div>
       <span>Institusi</span><?= $userData['institution_name']; ?>
