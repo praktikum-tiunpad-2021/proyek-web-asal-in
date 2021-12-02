@@ -5,29 +5,29 @@
     <div class="header-box bright">
         <h1>Ubah Email dan Password</h1>
     </div>
-      <form class="border" action="<?= base_url('profil/ubah-password/')?>" method="POST">
+      <form class="border" action="<?= base_url('profil/save-password/')?>" method="POST">
         <?= $this->include('/layout/form-error'); ?>
         <?= csrf_field(); ?>
 
         <input type="hidden" name="_method" value="PUT"/>
 
         <div class="form-item">
-            <span><label for="email">Email</label><strong>*</strong></span>
-            <input type="email" id="email" name="email" value="<?= old('email') ? old('email') : $email ?>">
+            <span><label for="old_password">Password Lama</label><strong>*</strong></span>
+            <input type="password" id="old_password" name="old_password">
         </div>
 
         <div class="form-item">
-            <span><label for="password">Password Lama</label><strong>*</strong></span>
+            <span><label for="email">Email Baru</label></span>
+            <input type="email" id="email" name="email" value="<?= old('email') ? old('email') : " " ?>">
+        </div>
+
+        <div class="form-item">
+            <span><label for="password">Password Baru</label></span>
             <input type="password" id="password" name="password">
         </div>
 
         <div class="form-item">
-            <span><label for="password">Password Baru</label><strong>*</strong></span>
-            <input type="password" id="passwordbaru" name="passwordbaru">
-        </div>
-
-        <div class="form-item">
-            <span><label for="confirm_password">Konfirmasi Password Baru<strong>*</strong></label></span>
+            <span><label for="confirm_password">Konfirmasi Password Baru</label></span>
             <input type="password" id="confirm_password" name="confirm_password">
         </div>
         

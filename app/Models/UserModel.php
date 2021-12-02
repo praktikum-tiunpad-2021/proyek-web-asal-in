@@ -23,6 +23,12 @@ class UserModel extends Model
       'email' => 'required|is_unique[user.email]|valid_email',
       'password' => 'required|min_length[8]',
       'confirm_password' => 'required|matches[password]'
+    ],
+    'update' => [
+      'old_password' => 'required|min_length[8]',
+      'email' => 'is_unique[user.email]',
+      'password' => 'permit_empty|min_length[8]',
+      'confirm_password' => 'matches[password]'
     ]
   ];
 
@@ -34,6 +40,10 @@ class UserModel extends Model
       'required' => 'Email harus diisi!',
       'is_unique' => 'Email sudah dipakai!',
       'valid_email' => 'Email harus diisi dengan benar!'
+    ],
+    'old_password' => [
+      'required' => 'Kata sandi lama harus diisi!',
+      'min_length' => 'Kata sandi lama minimal 8 karakter!'
     ],
     'password' => [
       'required' => 'Kata sandi harus diisi!',
