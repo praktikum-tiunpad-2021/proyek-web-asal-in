@@ -6,9 +6,11 @@
         <h1>Formulir Edit Buku</h1>
     </div>
 
-    <form class="border" action="<?= base_url('admin/buku/change-book/' . $bookData['book_id']) ?>" method="PUT">
+    <form class="border" action="<?= base_url('admin/buku/change-book/' . $bookData['book_id']) ?>" method="POST">
         <?= $this->include('/layout/form-error'); ?>
         <?= csrf_field(); ?>
+
+        <input type="hidden" name="_method" value="PUT"/>
 
         <div class="form-item">
             <span><label for="isbn">ISBN 13</label><strong>*</strong></span>

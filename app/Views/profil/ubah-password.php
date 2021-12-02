@@ -5,9 +5,11 @@
     <div class="header-box bright">
         <h1>Ubah Email dan Password</h1>
     </div>
-      <form class="border" action="<?= base_url('profil/ubah-password/')?>" method="PUT">
+      <form class="border" action="<?= base_url('profil/ubah-password/')?>" method="POST">
         <?= $this->include('/layout/form-error'); ?>
         <?= csrf_field(); ?>
+
+        <input type="hidden" name="_method" value="PUT"/>
 
         <div class="form-item">
             <span><label for="email">Email</label><strong>*</strong></span>

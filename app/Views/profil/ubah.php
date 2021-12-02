@@ -5,9 +5,11 @@
     <div class="header-box bright">
         <h1>Ubah Profil</h1>
     </div>
-    <form class="border" action="<?= base_url('profil/save-profile')?>" method="PUT">
+    <form class="border" action="<?= base_url('profil/save-profile')?>" method="POST">
         <?= $this->include('/layout/form-error'); ?>
         <?= csrf_field(); ?>
+
+        <input type="hidden" name="_method" value="PUT"/>
 
         <div class="form-item">
             <span><label for="name">Nama</label><strong>*</strong></span>

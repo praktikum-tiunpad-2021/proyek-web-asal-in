@@ -54,12 +54,12 @@ $routes->group('', ['filter' => 'user'], function ($routes) {
         $routes->get('ubah', 'ProfileController::ubahProfil');
         $routes->get('ubah-password', 'ProfileController::ubahPassword');
 
-        $routes->put('save-profile', 'ProfileController::saveProfile'); // Nggak jalan
-        $routes->put('save-password', 'ProfileController::savePassword'); // Nggak jalan
+        $routes->put('save-profile', 'ProfileController::saveProfile');
+        $routes->put('save-password', 'ProfileController::savePassword');
     });
 
     $routes->group('buku', function ($routes) {
-        $routes->get('pinjam/(:num)', 'BookController::pinjam/$1'); // Nggak jalan
+        $routes->get('pinjam/(:num)', 'BookController::pinjam/$1');
     });
 });
 
@@ -71,7 +71,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'ad
         $routes->get('tambah', 'BookController::tambahBuku');
         $routes->get('ubah/(:num)', 'BookController::ubahBuku/$1'); 
         $routes->post('add-book', 'BookController::addBook');
-        $routes->put('change-book/(:num)', 'BookController::changeBook/$1'); // Nggak jalan
+        $routes->put('change-book/(:num)', 'BookController::changeBook/$1');
     });
 
     $routes->group('kelola-user', function ($routes) {
@@ -79,7 +79,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'ad
         $routes->get('tambah', 'UserController::tambahUser');
         $routes->get('ubah/(:num)', 'UserController::ubahUser/$1'); 
         $routes->post('add-user', 'UserController::addUser');
-        $routes->put('change-user/(:num)', 'UserController::changeUser/$1'); // Nggak jalan
+        $routes->put('change-user/(:num)', 'UserController::changeUser/$1');
     });
 });
 
