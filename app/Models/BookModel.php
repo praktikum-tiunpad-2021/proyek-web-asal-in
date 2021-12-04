@@ -19,7 +19,6 @@ class BookModel extends Model
     'publisher' => 'required',
     'publication_date' => 'required|valid_date',
     'pages' => 'required|numeric',
-    'status' => 'required',
   ];
 
   protected $validationMessages = [
