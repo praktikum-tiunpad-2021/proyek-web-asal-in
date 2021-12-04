@@ -63,8 +63,8 @@ span {
         <tr>
           <td scope="row" style="text-align:center"><?= $i; ?></td>
           <td style="text-align:center"><?= $borrowItem['name']; ?></td>
-          <td style="text-align:center"><?= $borrowItem['borrowing_date']; ?></td>
-          <td style="text-align:center"><?= $borrowItem['returning_date']; ?></td>
+          <td style="text-align:center"><?= $borrowItem['borrowing_date'] ? $borrowItem['borrowing_date'] : '-'; ?></td>
+          <td style="text-align:center"><?= $borrowItem['returning_date'] ? $borrowItem['returning_date'] : '-';?></td>
           <td style="text-align:center">
             <?php if ($borrowItem['status'] == 'RETURNED'): ?>
               Dikembalikan

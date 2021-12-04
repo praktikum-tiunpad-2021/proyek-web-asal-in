@@ -35,7 +35,7 @@
           <td><a href="<?= base_url('buku/detail/' . $borrowItem['book_id']); ?>"><?= $borrowItem['book_title']; ?></a></td>
           <td style="text-align:center"><?= $borrowItem['reservation_date']; ?></td>
           <td style="text-align:center"><?= $borrowItem['borrowing_date'] ? $borrowItem['borrowing_date'] : '-'; ?></td>
-          <td style="text-align:center"><?= $borrowItem['returning_date']; ?></td>
+          <td style="text-align:center"><?= $borrowItem['returning_date'] ? $borrowItem['returning_date'] : '-'; ?></td>
           <td style="text-align:center">
             <?php if ($borrowItem['status'] == 'RETURNED'): ?>
               Dikembalikan
