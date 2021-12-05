@@ -23,6 +23,14 @@ class BorrowLogModel extends Model
                 ->findAll();
   }
 
+  public function getBorrowLogDataByUser($id)
+  {
+    return $this->join('book', 'borrow_log.book_id = book.book_id', 'left')
+                ->select('book.title as title, book.book_id as book_id, borrowing_date, returning_date, borrow_log.status as status')
+                ->where(['user_id' => $id])
+                ->findAll();
+  }
+
   public function getAllBorrowLogData()
   {
     return $this->join('user_profile', 'borrow_log.user_id = user_profile.user_id', 'left')

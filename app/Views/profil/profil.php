@@ -42,9 +42,50 @@ span {
     
   </div>  
 
+  <div style="padding-top: 1em;">
+    <a href="<?= base_url('profil/ubah') ?>" class="btn very-bright">Ubah Profil</a>
+    <a href="<?= base_url('profil/ubah-password') ?>" class="btn very-bright">Ubah Email/Password</a>
   </div>
-    <a href="<?= base_url('profil/ubah') ?>" class="btn bright">Ubah Profil</a>
-    <a href="<?= base_url('profil/ubah-password') ?>" class="btn bright">Ubah Email/Password</a>
-  </div>
+
+  <h1 class="header-padding">
+    Riwayat Peminjaman
+  </h1>
+
+  <?php if (!empty($borrowData)): ?>
+    <div style="overflow-x: auto;">
+      <table style="width:100%;">
+        <colgroup>
+          <col>
+          <col style="width:40%">
+        </colgroup>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Judul Buku</th>
+          <th scope="col">Tanggal Peminjaman</th>
+          <th scope="col">Tanggal Pengembalian</th>
+          <th scope="col">Status</th>
+        </tr>
+        <?php $i = 1; foreach($borrowData as $borrowItem): ?>
+        <tr>
+          <td scope="row" style="text-align:center"><?= $i; ?></td>
+          <td><a href="<?= base_url('buku/detail/' . $borrowItem['book_id']); ?>"><?= $borrowItem['title']; ?></a></td>
+          <td style="text-align:center"><?= $borrowItem['borrowing_date'] ? $borrowItem['borrowing_date'] : '-'; ?></td>
+          <td style="text-align:center"><?= $borrowItem['returning_date'] ? $borrowItem['returning_date'] : '-';?></td>
+          <td style="text-align:center">
+            <?php if ($borrowItem['status'] == 'RETURNED'): ?>
+              Dikembalikan
+            <?php elseif ($borrowItem['status'] == 'IN_PROGRESS'): ?>
+              Dipinjam
+              <?php elseif ($borrowItem['status'] == 'BOOKED'): ?>
+              Dipesan
+            <?php endif; ?>
+          </td>
+        </tr>
+        <?php $i++; endforeach; ?>
+      </table>
+    </div>
+  <?php else: ?>
+    Kamu tidak pernah meminjam!
+  <?php endif; ?>
 </main>
 <?= $this->endSection('content'); ?>

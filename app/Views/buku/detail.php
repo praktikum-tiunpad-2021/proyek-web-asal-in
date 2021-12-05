@@ -39,7 +39,7 @@ span {
     </div>
   </div>
 
-  <a href="<?= base_url('buku/pinjam/' . $bookData['book_id']); ?>" class="btn very-bright">Pinjam</a>
+  <a href="<?= base_url('buku/pinjam/' . $bookData['book_id']); ?>" class="btn very-bright" style="margin-top: 1em;">Pinjam</a>
 
   <h1 class="header-padding">
     Riwayat Peminjaman
@@ -79,7 +79,7 @@ span {
       </table>
     </div>
   <?php else: ?>
-    Tidak ada data peminjaman!
+    Buku ini tidak pernah dipinjam!
   <?php endif; ?>
 </main>
 <?= $this->endSection('content'); ?>

@@ -10,13 +10,13 @@
       <table style="width:100%; min-width:1024px">
         <colgroup>
           <col>
-          <col style="width:10%;">
+          <col style="width:15%;">
           <col style="width:25%;">
           <col>
           <col>
           <col>
           <col>
-          <col style="width:18%;">
+          <col style="width:10%;">
         </colgroup>
         <tr>
           <th scope="col">No.</th>
@@ -49,10 +49,10 @@
           </td>
           <td style="text-align:center">
             <?php if ($borrowItem['status'] == 'IN_PROGRESS'): ?>
-              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/return/' . $borrowItem['borrow_log_id']); ?>">Buku Dikembalikan</a>
+              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/return/' . $borrowItem['borrow_log_id']); ?>">Return</a>
             <?php elseif ($borrowItem['status'] == 'BOOKED'): ?>
-              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/borrow/' . $borrowItem['borrow_log_id']); ?>">Buku Dipinjam</a>
-              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/cancel/' . $borrowItem['borrow_log_id']); ?>">Batal Meminjam</a>
+              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/borrow/' . $borrowItem['borrow_log_id']); ?>">Borrow</a>
+              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/cancel/' . $borrowItem['borrow_log_id']); ?>">Decline</a>
             <?php endif; ?>
           </td>
         </tr>

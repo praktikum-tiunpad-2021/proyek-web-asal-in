@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+
+use App\Models\BorrowLogModel;
 use App\Models\UserModel;
 use App\Models\UserProfileModel;
 
@@ -13,6 +15,7 @@ class ProfileController extends BaseController
   {
     $this->userModel = new UserModel();
     $this->userProfileModel = new UserProfileModel();
+    $this->borrowLogModel = new BorrowLogModel();
   }
 
   public function index()
@@ -20,7 +23,8 @@ class ProfileController extends BaseController
     $data = [
       'pageTitle' => 'Profil | ' . SITE_TITLE,
       'userData' => array_merge($this->userProfileModel->find(session()->userData['user_id']), 
-                    ['email' => $this->userModel->find(session()->userData['user_id'])['email']])
+                    ['email' => $this->userModel->find(session()->userData['user_id'])['email']]),
+      'borrowData' => $this->borrowLogModel->getBorrowLogDataByUser(session()->userData['user_id']),
     ];
     return view('profil/profil', $data);
   }
