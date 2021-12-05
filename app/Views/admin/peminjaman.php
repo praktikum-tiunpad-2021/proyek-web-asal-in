@@ -49,10 +49,10 @@
           </td>
           <td style="text-align:center">
             <?php if ($borrowItem['status'] == 'IN_PROGRESS'): ?>
-              <a class="btn very-bright">Buku Dikembalikan</a>
+              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/return/' . $borrowItem['borrow_log_id']); ?>">Buku Dikembalikan</a>
             <?php elseif ($borrowItem['status'] == 'BOOKED'): ?>
-              <a class="btn very-bright">Buku Dipinjam</a>
-              <a class="btn very-bright">Batal Meminjam</a>
+              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/borrow/' . $borrowItem['borrow_log_id']); ?>">Buku Dipinjam</a>
+              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/cancel/' . $borrowItem['borrow_log_id']); ?>">Batal Meminjam</a>
             <?php endif; ?>
           </td>
         </tr>
