@@ -19,7 +19,7 @@ class BookController extends BaseController
   {
     $data = [
       'pageTitle' => 'Katalog | ' . SITE_TITLE,
-      'books' => $this->bookModel->paginate(5),
+      'books' => $this->bookModel->paginate(20),
       'pager' => $this->bookModel->pager
     ];
 
