@@ -87,3 +87,21 @@
     <br><br><br><br>
 </main>
 <?= $this->endSection('content'); ?>
+
+<?= $this->section('custom_script'); ?>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let gender = <?php echo(json_encode(old('gender') ? old('gender') : '')) ?>;
+        document.getElementById(gender).checked = true;
+
+        let status = <?php echo(json_encode(old('status') ? old('status') : '')) ?>;
+        let statusElement = document.getElementById("status");
+
+        for (let i = 0; i < statusElement.options.length; i++){
+            if (statusElement.options[i].value == status){
+                statusElement.options[i].selected = true;
+            }
+        }
+    });
+</script>
+<?= $this->endSection('custom_script'); ?>

@@ -44,11 +44,11 @@
 
         <div class="form-item">
             <span><label for="status">Status</label></span>
-            <select name="status" id="status" <?= ($bookData['status'] == "BORROWED" || $bookData['status'] == "BOOKED") ? 'disabled' : '' ?> >
-                <option <?= $bookData['status'] == "BORROWED" ? 'selected' : '' ?> value="BORROWED" hidden>Dipinjam</option>
-                <option <?= $bookData['status'] == "BOOKED" ? 'selected' : '' ?> value="BOOKED" hidden>Dipesan</option>
-                <option <?= $bookData['status'] == "UNAVAILABLE" ? 'selected' : '' ?> value="UNAVAILABLE">Tidak Tersedia</option>
-                <option <?= $bookData['status'] == "AVAILABLE" ? 'selected' : '' ?> value="AVAILABLE">Tersedia</option>
+            <select name="status" id="status">
+                <option value="BORROWED" hidden>Dipinjam</option>
+                <option value="BOOKED" hidden>Dipesan</option>
+                <option value="UNAVAILABLE">Tidak Tersedia</option>
+                <option value="AVAILABLE">Tersedia</option>
             </select>
         </div>
 
@@ -58,3 +58,20 @@
     </form>
 </main>
 <?= $this->endSection('content'); ?>
+
+<?= $this->section('custom_script'); ?>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let status = <?php echo(json_encode(old('status') ? old('status') : $bookData['status'])) ?>;
+        let statusElement = document.getElementById("status");
+
+        for (let i = 0; i < statusElement.options.length; i++){
+            if (statusElement.options[i].value == status){
+                statusElement.options[i].selected = true;
+            }
+        }
+
+        if (status == "BOOKED" || status == "BORROWED") statusElement.setAttribute("disabled", "disabled");
+    });
+</script>
+<?= $this->endSection('custom_script'); ?>
