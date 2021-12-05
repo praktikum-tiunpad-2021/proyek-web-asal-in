@@ -42,7 +42,7 @@ class BookController extends BaseController
   public function pinjam($id)
   {
     $bookData = $this->bookModel->find($id);
-    if (!$bookData || $bookData['status'] == 'UNAVAILABLE' || $bookData['status'] == 'BOROWED')
+    if (!$bookData || $bookData['status'] == 'UNAVAILABLE' || $bookData['status'] == 'BORROWED')
       return view('errors/html/error_404');
 
     $borrowData = $this->borrowLogModel
