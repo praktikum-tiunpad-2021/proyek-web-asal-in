@@ -37,7 +37,7 @@
         <th scope="col">Status</th>
         <th scope="col">Aksi</th>
       </tr>
-      <?php $i = 1; foreach($books as $book): ?>
+      <?php $i = (($pager->getCurrentPage() - 1) * $pager->getPerPage()) + 1; foreach($books as $book): ?>
       <tr>
         <td scope="row" style="text-align:center"><?= $i; ?></td>
         <td style="font-size: 0.75em; text-align:center"><?= $book['isbn']; ?></td>
