@@ -74,7 +74,7 @@ class ProfileController extends BaseController
       return redirect()->back()->withInput();
 
     if (!password_verify($this->request->getVar('old_password'), $this->userModel->find(session()->userData['user_id'])['password']))
-      return redirect()->back()->withInput()->with('form-errors', 'Nomor anggota atau password salah!');
+      return redirect()->back()->withInput()->with('form-errors', 'Password lama salah!');
 
     $saveData = [];
     if ($this->request->getVar('password') != "") $saveData['password'] = $this->request->getVar('password');

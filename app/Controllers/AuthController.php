@@ -39,7 +39,7 @@ class AuthController extends BaseController
 
     $user = $this->userModel->where('email', $this->request->getPost('email'))->first();
     if (!$user || !password_verify($this->request->getPost('password'), $user['password'])){
-      return redirect()->back()->withInput()->with('form-errors', 'Nomor anggota atau password salah!');
+      return redirect()->back()->withInput()->with('form-errors', 'Email atau password salah!');
     }
 
     if ($this->request->getPost('stay_logged_in') == 'on'){
