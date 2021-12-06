@@ -41,4 +41,12 @@ class BookModel extends Model
       'required' => 'Jumlah halaman harus diisi!',
     ],
   ];
+
+  public function getBookDataByKeyword($keyword){
+    return $this->like('isbn', $keyword)
+                ->orLike('title', $keyword)
+                ->orLike('author', $keyword)
+                ->orLike('publisher', $keyword)
+                ->paginate(20);
+  }
 }

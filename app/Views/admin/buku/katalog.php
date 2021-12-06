@@ -5,9 +5,16 @@
   <h1 class="header-padding">
     Katalog Buku
   </h1>
+
   <div style="margin-bottom: 2em;">
     <a href="<?= base_url('admin/buku/tambah'); ?>" class="btn very-bright">Tambah buku</a>
   </div>
+
+  <form action="<?= base_url('admin/buku/katalog/'); ?>" method="GET" style="display: flex; padding-bottom: 1em;">
+    <input type="text" style="margin-right:1em;" placeholder="Search.." name="keyword" value="<?= isset($keyword) ? $keyword : ''; ?>">
+    <button class="btn very-bright" type="submit">Cari</button>
+  </form>
+
   <div style="overflow-x: auto;">
     <table style="width: 100%; min-width: 1000px">
       <colgroup>

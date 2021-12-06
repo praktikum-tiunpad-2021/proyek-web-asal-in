@@ -23,6 +23,11 @@ class BookController extends BaseController
       'pager' => $this->bookModel->pager
     ];
 
+    if ($this->request->getGet('keyword')){
+      $data['books'] = $this->bookModel->getBookDataByKeyword($this->request->getGet('keyword'));
+      $data['keyword'] = $this->request->getGet('keyword');
+    }
+
     return view('buku/katalog', $data);
   }
 

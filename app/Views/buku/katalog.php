@@ -2,22 +2,14 @@
 
 <?= $this->section('content'); ?>
 <main class="container">
-  <div class ="row">
-    <div class="col-6">
-      <h1 class="header-padding">
-      Katalog Buku
-      </h1>
-      <form action="">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search.." name="keyword">
-          <!-- <div class="input-group-append"> -->
-            <button class="btn btn-outline-secondary" type="submit">Cari</button>
-          <!-- </div> -->
-        </div>
-      </form>
-    </div>
-  </div>
+  <h1 class="header-padding">
+    Katalog Buku
+  </h1>
 
+  <form action="<?= base_url('buku/katalog/'); ?>" method="GET" style="display: flex; padding-bottom: 1em;">
+    <input type="text" style="margin-right:1em;" placeholder="Search.." name="keyword" value="<?= isset($keyword) ? $keyword : ''; ?>">
+    <button class="btn very-bright" type="submit">Cari</button>
+  </form>
 
   <div>
     <table style="width:100%;">

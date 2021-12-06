@@ -18,9 +18,15 @@ class BookController extends BaseController
   {
     $data = [
       'pageTitle' => 'Katalog | ' . SITE_TITLE,
-      'books' => $this->bookModel->paginate(5),
+      'books' => $this->bookModel->paginate(20),
       'pager' => $this->bookModel->pager
     ];
+
+    if ($this->request->getGet('keyword')){
+      $data['books'] = $this->bookModel->getBookDataByKeyword($this->request->getGet('keyword'));
+      $data['keyword'] = $this->request->getGet('keyword');
+    }
+
 
     return view('admin/buku/katalog', $data);
   }
