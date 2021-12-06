@@ -25,6 +25,16 @@ $palette-gold: #b3995d;
   background-color: $palette-very-bright;
 }
 
+.red {
+  color: white;
+  background-color: #dc3545;
+}
+
+.green {
+  color: white;
+  background-color: #198754;;
+}
+
 .border {
   border: 2px solid $palette-bright;
   padding: 2em;
@@ -213,10 +223,10 @@ header {
 }
 
 .error-container {
-  border: 1px solid rgb(255, 128, 128);
+  border: 1px solid #f5c2c7;
   border-radius: 5px;
-  background-color: rgb(255, 192, 192);
-  color: rgb(224, 0, 0);
+  background-color: #f8d7da;
+  color: #842029;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 3em;
@@ -229,10 +239,10 @@ header {
 }
 
 .success-container {
-  border: 1px solid rgb(128, 255, 128);
+  border: 1px solid #badbcc;
   border-radius: 5px;
-  background-color: rgb(192, 255, 192);
-  color: rgb(0, 224, 0);
+  background-color: #d1e7dd;
+  color: #0f5132;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 3em;

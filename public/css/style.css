@@ -18,6 +18,16 @@
   background-color: #0077b6;
 }
 
+.red {
+  color: white;
+  background-color: #dc3545;
+}
+
+.green {
+  color: white;
+  background-color: #198754;
+}
+
 .border {
   border: 2px solid #023e8a;
   padding: 2em;
@@ -211,10 +221,10 @@ header .button-container {
 }
 
 .error-container {
-  border: 1px solid #ff8080;
+  border: 1px solid #f5c2c7;
   border-radius: 5px;
-  background-color: #ffc0c0;
-  color: #e00000;
+  background-color: #f8d7da;
+  color: #842029;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 3em;
@@ -227,10 +237,10 @@ header .button-container {
 }
 
 .success-container {
-  border: 1px solid #80ff80;
+  border: 1px solid #badbcc;
   border-radius: 5px;
-  background-color: #c0ffc0;
-  color: #00e000;
+  background-color: #d1e7dd;
+  color: #0f5132;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 3em;
