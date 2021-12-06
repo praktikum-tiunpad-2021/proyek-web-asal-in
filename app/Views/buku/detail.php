@@ -40,7 +40,7 @@ span {
   </div>
 
   <?php if ($bookData['status'] == 'BOOKED' || $bookData['status'] == 'AVAILABLE'): ?>
-    <a href="<?= base_url('buku/pinjam/' . $bookData['book_id']); ?>" class="btn very-bright" style="margin-top: 1em;">Pinjam</a>
+    <a href="<?= base_url('buku/pinjam/' . $bookData['book_id']); ?>" class="btn green" style="margin-top: 1em;">Pinjam</a>
   <?php endif; ?>
 
   <h1 class="header-padding">

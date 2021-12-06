@@ -49,10 +49,10 @@
           </td>
           <td style="text-align:center">
             <?php if ($borrowItem['status'] == 'IN_PROGRESS'): ?>
-              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/return/' . $borrowItem['borrow_log_id']); ?>">Return</a>
+              <a class="btn green" href="<?= base_url('admin/peminjaman/return/' . $borrowItem['borrow_log_id']); ?>">Return</a>
             <?php elseif ($borrowItem['status'] == 'BOOKED'): ?>
-              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/borrow/' . $borrowItem['borrow_log_id']); ?>">Borrow</a>
-              <a class="btn very-bright" href="<?= base_url('admin/peminjaman/cancel/' . $borrowItem['borrow_log_id']); ?>">Decline</a>
+              <a class="btn green" href="<?= base_url('admin/peminjaman/borrow/' . $borrowItem['borrow_log_id']); ?>">Borrow</a>
+              <a class="btn red" href="<?= base_url('admin/peminjaman/cancel/' . $borrowItem['borrow_log_id']); ?>">Decline</a>
             <?php endif; ?>
           </td>
         </tr>

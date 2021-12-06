@@ -49,7 +49,7 @@
         <td style="text-align:center">
           <a href="<?= base_url('buku/detail/' . $book['book_id']); ?>" class="btn very-bright">Detail</a>
           <?php if ($book['status'] == 'AVAILABLE' || $book['status'] == 'BOOKED'): ?>
-            <a href="<?= base_url('buku/pinjam/' . $book['book_id']); ?>" class="btn very-bright">Pinjam</a>
+            <a href="<?= base_url('buku/pinjam/' . $book['book_id']); ?>" class="btn green">Pinjam</a>
           <?php endif; ?>
         </td>
       </tr>
