@@ -236,8 +236,8 @@ header .dropdown .dropdown-content {
 
 header .dropdown .dropdown-content a {
   display: block;
-  padding: 0.5em 0 0.5em 1em;
-  color: #023e8a;
+  padding: 0.5em 1em;
+  color: #03045e;
 }
 
 header .dropdown .dropdown-content a:hover {
