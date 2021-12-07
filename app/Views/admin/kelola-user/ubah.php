@@ -17,6 +17,11 @@
             <input type="email" id="email" name="email" value="<?= old('email') ? old('email') : $userData['email'] ?>">
         </div>
 
+        <div class="form-item">
+            <span><label for="role">Role</label><strong>*</strong></span>
+            <input type="text" id="role" name="role" value="<?= old('role') ? old('role') : $userData['role'] ?>">
+        </div>
+
         <div class="form-item" style="justify-content:space-evenly">
         <input type="submit" class="btn very-bright" name="add" value="Ubah User">
         </div>

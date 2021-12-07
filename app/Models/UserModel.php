@@ -33,7 +33,8 @@ class UserModel extends Model
   ];
 
   protected $validationRules = [
-    'email' => 'required'
+    'email' => 'required',
+    'role' => 'required'
   ];
 
   protected $validationMessages = [
