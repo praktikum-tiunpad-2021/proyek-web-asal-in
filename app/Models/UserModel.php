@@ -32,6 +32,10 @@ class UserModel extends Model
     ]
   ];
 
+  protected $validationRules = [
+    'email' => 'required'
+  ];
+
   protected $validationMessages = [
     'user_id' => [
       'required' => 'Nomor anggota harus diisi!',

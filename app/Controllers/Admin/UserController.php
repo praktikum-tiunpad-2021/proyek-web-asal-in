@@ -22,8 +22,8 @@ class UserController extends BaseController
     $data = [
       'pageTitle' => 'Daftar User | ' . SITE_TITLE,
       // 'users' => $this->userModel->findAll(),
-      'users' => $this->userModel->paginate(5, 'users'), 
-      'user_profiles' => $this->userProfileModel->paginate(5, 'user_profiles'),
+      'users' => $this->userModel->paginate(5), 
+      'user_profiles' => $this->userProfileModel->paginate(5),
       'pager' => $this->userModel->pager,
       'pager' => $this->userProfileModel->pager
     ];
