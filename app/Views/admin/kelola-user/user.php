@@ -69,7 +69,7 @@
       <tr>
         <th scope="col">No.</th>
         <th scope="col">User ID</th>
-        <th scope="col">Alamat e-mail</th>
+        <th scope="col">Alamat E-mail</th>
         <th scope="col">Role</th>
         <th scope="col">Aksi</th>
       </tr>
