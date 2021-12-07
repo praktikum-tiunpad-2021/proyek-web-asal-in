@@ -47,4 +47,13 @@ class UserProfileModel extends Model
     $data['user_id'] = $id;
     $this->insert($data);
   }
+
+  protected $validationRules = [
+    'name' => 'required',
+    'date_of_birth' => 'required|valid_date',
+    'address' => 'required',
+    'status' => 'required',
+    'institution_name' => 'required',
+    'phone_number' => 'required'
+  ];
 }

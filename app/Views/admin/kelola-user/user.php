@@ -44,7 +44,7 @@
         <td style="text-align:center"><?= $user['status']; ?></td>
         <td style="text-align:center"><?= $user['institution_name']; ?></td>
         <td style="text-align:center"><?= $user['phone_number']; ?></td>
-        <td style="text-align:center"><a href="<?= base_url('admin/kelola-user/ubah/' . $user['user_id']); ?>" class="btn very-bright">Ubah</a></td>
+        <td style="text-align:center"><a href="<?= base_url('admin/kelola-user/ubah-profile/' . $user['user_id']); ?>" class="btn very-bright">Ubah</a></td>
       </tr>
       <?php $i++; endforeach; ?>
     </table>

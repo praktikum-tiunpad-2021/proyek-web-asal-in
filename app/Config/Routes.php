@@ -86,6 +86,8 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'ad
         $routes->get('ubah/(:num)', 'UserController::ubahUser/$1'); 
         $routes->post('add-user', 'UserController::addUser');
         $routes->put('change-user/(:num)', 'UserController::changeUser/$1');
+        $routes->put('change-user-profile/(:num)', 'UserController::changeUserProfile/$1');
+        $routes->get('ubah-profile/(:num)', 'UserController::ubahUserProfile/$1'); 
     });
 });
 

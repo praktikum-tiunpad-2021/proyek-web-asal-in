@@ -76,4 +76,28 @@ class UserController extends BaseController
     $this->userModel->update($id, $this->request->getVar());
     return redirect()->to('admin/kelola-user/user');
   }
+
+  public function ubahUserProfile($id)
+  {
+    $data = [
+      'pageTitle' => 'Ubah User Profile | ' . SITE_TITLE,
+      'userProfileData' => $this->userProfileModel->find($id),
+      'errors' => \Config\Services::validation(),
+    ];
+
+    return view('admin/kelola-user/ubahprofile', $data);
+  }
+
+  public function changeUserProfile($id)
+  {
+    $rules = $this->userProfileModel->getValidationRules();
+    $messages = $this->userProfileModel->getValidationMessages();
+
+    if (!$this->validate($rules, $messages)) {
+      return redirect()->back()->withInput();
+    }
+
+    $this->userProfileModel->update($id, $this->request->getVar());
+    return redirect()->to('admin/kelola-user/user');
+  }
 }
