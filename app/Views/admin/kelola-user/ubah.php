@@ -13,12 +13,12 @@
         <input type="hidden" name="_method" value="PUT"/>
 
         <div class="form-item">
-            <span><label for="email">E-mail</label><strong>*</strong></span>
+            <span><label for="email">E-mail</label></span>
             <input type="email" id="email" name="email" value="<?= old('email') ? old('email') : $userData['email'] ?>">
         </div>
 
         <div class="form-item">
-            <span><label for="role">Role</label><strong>*</strong></span>
+            <span><label for="role">Role (ADMIN/USER)</label></span>
             <input type="text" id="role" name="role" value="<?= old('role') ? old('role') : $userData['role'] ?>">
         </div>
 
