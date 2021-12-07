@@ -220,6 +220,33 @@ header {
   .button-container {
     margin-left: 1em;
   }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+      a {
+        display: block;
+        padding: 0.5em 0 0.5em 1em;
+        color: $palette-bright;
+
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+    }
+
+    &:hover .dropdown-content {
+      display: block;
+    }
+  }
 }
 
 .error-container {
