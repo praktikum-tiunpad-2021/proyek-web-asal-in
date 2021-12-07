@@ -12,7 +12,7 @@
 
         <div class="form-item">
             <span><label for="name">Nama Kategori</label><strong>*</strong></span>
-            <input type="text" id="name" name="name" value="<?= old('name') ? old('name') : $categoryData['name'] ?>">
+            <input type="text" id="name" name="name" value="<?= old('name') ? old('name') : '' ?>">
         </div>
 
         <div class="form-item" style="justify-content:space-evenly">
