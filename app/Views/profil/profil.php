@@ -1,6 +1,6 @@
 <?= $this->extend('/layout/base'); ?>
 
-<?= $this->section('content'); ?>
+<?= $this->section('custom_css'); ?>
 <style>
 span {
   width: 150px;
@@ -10,6 +10,9 @@ span {
   font-weight: bold;
 }
 </style>
+<?= $this->endSection('custom_css'); ?>
+
+<?= $this->section('content'); ?>
 <main class="container">
   <h1 class="header-padding">Profil</h1>
   <div>
