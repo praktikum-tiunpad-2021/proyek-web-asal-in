@@ -7,7 +7,8 @@
   </h1>
 
   <div style="margin-bottom: 2em;">
-    <a href="<?= base_url('admin/buku/tambah'); ?>" class="btn very-bright">Tambah buku</a>
+    <a href="<?= base_url('admin/buku/tambah'); ?>" class="btn very-bright">Tambah Buku</a>
+    <a href="<?= base_url('admin/kategori'); ?>" class="btn very-bright">Kelola Kategori</a>
   </div>
 
   <form action="<?= base_url('admin/buku/katalog/'); ?>" method="GET" style="display: flex; padding-bottom: 1em;">

@@ -11,4 +11,14 @@ class CategoryModel extends Model
   protected $useAutoIncrement = true;
 
   protected $allowedFields = ['name'];
+
+  protected $validationRules = [
+    'name' => 'required',
+  ];
+
+  protected $validationMessages = [
+    'name' => [
+      'required' => 'Nama kategori harus diisi!',
+    ],
+  ];
 }

@@ -80,6 +80,14 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'ad
         $routes->put('change-book/(:num)', 'BookController::changeBook/$1');
     });
 
+    $routes->group('kategori', function ($routes) {
+        $routes->get('', 'CategoryController::index');
+        $routes->get('tambah', 'CategoryController::tambahKategori');
+        $routes->get('ubah/(:num)', 'CategoryController::ubahKategori/$1'); 
+        $routes->post('add-category', 'CategoryController::addCategory');
+        $routes->put('change-category/(:num)', 'CategoryController::changeCategory/$1');
+    });
+
     $routes->group('kelola-user', function ($routes) {
         $routes->get('user', 'UserController::user');
         $routes->get('tambah', 'UserController::tambahUser');
