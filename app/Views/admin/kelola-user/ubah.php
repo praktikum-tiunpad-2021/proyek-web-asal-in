@@ -18,8 +18,11 @@
         </div>
 
         <div class="form-item">
-            <span><label for="role">Role (ADMIN/USER)</label></span>
-            <input type="text" id="role" name="role" value="<?= old('role') ? old('role') : $userData['role'] ?>">
+            <span><label for="role">Role</label></span>
+            <select name="role" id="role">
+                <option value="USER">USER</option>
+                <option value="ADMIN">ADMIN</option>
+            </select>
         </div>
 
         <div class="form-item" style="justify-content:space-evenly">
