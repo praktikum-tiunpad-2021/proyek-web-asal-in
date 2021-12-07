@@ -4,14 +4,20 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Models\BookModel;
+use App\Models\CategorizationModel;
+use App\Models\CategoryModel;
 
 class BookController extends BaseController
 {
   protected $bookModel;
+  protected $categoryModel;
+  protected $categorizationModel;
 
   public function __construct()
   {
     $this->bookModel = new BookModel();
+    $this->categoryModel = new CategoryModel();
+    $this->categorizationModel = new CategorizationModel();
   }
 
   public function katalog()
@@ -35,6 +41,7 @@ class BookController extends BaseController
   {
     $data = [
       'pageTitle' => 'Tambah Buku | ' . SITE_TITLE,
+      'categories' => $this->categoryModel->findAll(),
       'errors' => \Config\Services::validation(),
     ];
     return view('admin/buku/tambah', $data);
@@ -49,7 +56,8 @@ class BookController extends BaseController
       return redirect()->back()->withInput();
     }
 
-    $this->bookModel->insert($this->request->getPost());
+    $id = $this->bookModel->insert($this->request->getPost());
+    $this->categorizationModel->insertCategories($id, $this->request->getPost('categories'));
     return redirect()->to('admin/buku/katalog');
   }
 
@@ -58,8 +66,10 @@ class BookController extends BaseController
     $data = [
       'pageTitle' => 'Ubah Buku | ' . SITE_TITLE,
       'bookData' => $this->bookModel->find($id),
+      'categories' => $this->categoryModel->findAll(),
       'errors' => \Config\Services::validation(),
     ];
+    $data['bookData']['categories'] = $this->categorizationModel->getCategories($id);
 
     return view('admin/buku/ubah', $data);
   }
@@ -74,6 +84,7 @@ class BookController extends BaseController
     }
 
     $this->bookModel->update($id, $this->request->getVar());
+    $this->categorizationModel->insertCategories($id, $this->request->getVar('categories'));
     return redirect()->to('admin/buku/katalog');
   }
 }

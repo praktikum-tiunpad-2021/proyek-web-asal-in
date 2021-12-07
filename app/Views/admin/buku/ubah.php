@@ -43,6 +43,15 @@
         </div>
 
         <div class="form-item">
+            <span><label for="categories[]">Kategori</label></span>
+            <select name="categories[]" id="categories[]" multiple size="2">
+                <?php foreach($categories as $category): ?>
+                    <option value="<?= $category['category_id']; ?>"><?= $category['name']; ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
+        <div class="form-item">
             <span><label for="status">Status</label></span>
             <select name="status" id="status">
                 <option value="BORROWED" hidden>Dipinjam</option>
@@ -72,6 +81,20 @@
         }
 
         if (status == "BOOKED" || status == "BORROWED") statusElement.setAttribute("disabled", "disabled");
+
+
+        let categories = <?php echo(json_encode(old('categories') ? old('categories') : $bookData['categories'])) ?>;
+        if (categories == "") return;
+        let categoriesElement = document.getElementById("categories[]");
+
+        for (let i = 0; i < categoriesElement.options.length; i++){
+            categories.forEach(element => {
+                if (element == categoriesElement.options[i].value){
+                    categoriesElement.options[i].selected = true;
+                    return;
+                }
+            });
+        }
     });
 </script>
 <?= $this->endSection('custom_script'); ?>

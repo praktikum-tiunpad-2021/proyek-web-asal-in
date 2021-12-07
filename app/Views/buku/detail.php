@@ -37,6 +37,9 @@ span {
     <div>
       <span>ISBN</span><?= $bookData['isbn']; ?>
     </div>
+    <div>
+      <span>Kategori</span><?= $bookData['categories']; ?>
+    </div>
   </div>
 
   <?php if ($bookData['status'] == 'BOOKED' || $bookData['status'] == 'AVAILABLE'): ?>

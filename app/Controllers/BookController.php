@@ -3,16 +3,19 @@
 namespace App\Controllers;
 use App\Models\BookModel;
 use App\Models\BorrowLogModel;
+use App\Models\CategorizationModel;
 
 class BookController extends BaseController
 {
   protected $bookModel;
   protected $borrowLogModel;
+  protected $categorizationModel;
 
   public function __construct()
   {
     $this->bookModel = new BookModel();
     $this->borrowLogModel = new BorrowLogModel();
+    $this->categorizationModel = new CategorizationModel();
   }
 
   public function katalog()
@@ -41,6 +44,7 @@ class BookController extends BaseController
       'pageTitle' => $bookData['title'] . ' | ' . SITE_TITLE,
       'borrowData' => $this->borrowLogModel->getBorrowLogData($id),
     ];
+    $data['bookData']['categories'] = $this->categorizationModel->getCategoryNames($id);
     return view('buku/detail', $data);
   }
 
