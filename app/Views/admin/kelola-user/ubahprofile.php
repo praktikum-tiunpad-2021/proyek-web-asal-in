@@ -29,7 +29,12 @@
 
         <div class="form-item">
             <span><label for="status">Status</label></span>
-            <input type="text" id="status" name="status" value="<?= old('status') ? old('status') : $userProfileData['status'] ?>">
+            <select name="status" id="status">
+                <option value="PELAJAR">Pelajar</option>
+                <option value="MAHASISWA">Mahasiswa</option>
+                <option value="UMUM">Umum</option>
+                <option value="PENELITI">Peneliti</option>
+            </select>
         </div>
 
         <div class="form-item">
