@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <main class="container round-border">
     <div class="header-box bright">
-        <h1>Formulir Edit User</h1>
+        <h1>Formulir Edit Profile User</h1>
     </div>
 
     <form class="border" action="<?= base_url('admin/kelola-user/change-user-profile/' . $userProfileData['user_id']) ?>" method="POST">
