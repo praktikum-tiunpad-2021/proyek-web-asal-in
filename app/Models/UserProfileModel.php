@@ -50,6 +50,7 @@ class UserProfileModel extends Model
 
   protected $validationRules = [
     'name' => 'required',
+    'gender' => 'required',
     'date_of_birth' => 'required|valid_date',
     'address' => 'required',
     'status' => 'required',

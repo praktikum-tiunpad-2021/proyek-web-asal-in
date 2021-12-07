@@ -18,6 +18,15 @@
         </div>
 
         <div class="form-item">
+            <span><label for="gender">Jenis Kelamin</label></span>
+            <select name="gender" id="gender">
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+                <option value="OTHER">Other</option>
+            </select>
+        </div>
+
+        <div class="form-item">
             <span><label for="date_of_birth">Tanggal Lahir</label></span>
             <input type="date" id="date_of_birth" name="date_of_birth" value="<?= old('date_of_birth') ? old('date_of_birth') : $userProfileData['date_of_birth'] ?>">
         </div>
