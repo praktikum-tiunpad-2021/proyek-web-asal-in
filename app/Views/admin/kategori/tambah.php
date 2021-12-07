@@ -6,7 +6,7 @@
         <h1>Tambahkan Kategori</h1>
     </div>
 
-    <form class="border" action="<?= base_url('admin/kategori/change-category') ?>" method="POST">
+    <form class="border" action="<?= base_url('admin/kategori/add-category') ?>" method="POST">
         <?= $this->include('/layout/form-error'); ?>
         <?= csrf_field(); ?>
 
